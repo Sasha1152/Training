@@ -1,2 +1,2 @@
-this repozitory by Sasha Shmigelskii\n
-it's my traning repozitory
+This repozitory by Sasha Shmigelskii. 
+It's my traning repozitory
