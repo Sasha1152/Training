@@ -109,7 +109,7 @@ print("the surname student's %s is "
       + str(stud_info(data_base_students[number_stud]).get_surname()))\
       % str(stud_info(data_base_students[number_stud]).get_name())
 print('%s is %d years old')\
-      % (str(stud_info(data_base_students[number_stud]).get_name()),\
+      % (str(stud_info(data_base_students[number_stud]).get_name()),
         stud_info(data_base_students[number_stud]).get_age())
 print('marks: ' + str(marks))
 print('average mark: ' + str(stud_info(data_base_students[number_stud]).get_average_mark()))

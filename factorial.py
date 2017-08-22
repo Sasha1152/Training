@@ -17,6 +17,14 @@ def fact3(n):
     else:
         return n * fact3(n - 1)
 
+def fact4(n):
+    f = 1
+    for i in range(n):
+        f *= n
+        n -= 1
+    return f
+
 print fact1(5)
 print fact2(5)
 print fact3(5)
+print fact4(5)
