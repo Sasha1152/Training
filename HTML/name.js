@@ -1,5 +1,6 @@
 'use strict'
 
-var name = 'Oleksandr';
-var admin = name;
-alert (admin);
+var name = prompt('What is your name?');
+alert('Hello ' + name + '!');
+var status = confirm('Are you married?');
+alert(status);
