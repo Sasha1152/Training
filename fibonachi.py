@@ -8,6 +8,7 @@ def fib_less_then_number(n):
         b = a + b
     return result
 
+
 def fib_value_by_number(n):
     a, b = 0, 1
     if n == 0:
@@ -19,5 +20,29 @@ def fib_value_by_number(n):
             n -= 1
         return b
 
+
+def fib2(n):
+    a = 0
+    b = 1
+    while b < n:
+        print(a)
+        print(b)
+        a=a+b
+        b=a+b
+
+
+def fib(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib(n - 1) + fib(n - 2)
+
 print fib_less_then_number(60)
+print '-'*8
 print fib_value_by_number(10)
+print '-'*8
+print fib(10)
+print '-'*8
+print fib2(60)
