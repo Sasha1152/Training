@@ -1,0 +1,1 @@
+{'Friday': {}, 'Tuesday': {}, 'Thursday': {}, 'Wednesday': {}, 'Monday': {'11:00': 'Oleg', '9:00': 'Sasha'}}
