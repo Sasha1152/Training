@@ -9,7 +9,7 @@ def sort_list(lst):
         not_sorted_list.remove(min(not_sorted_list))
     return sorted_list
 
-print sort_list(some_list)
+# print sort_list(some_list)
 
 
 def bubble_sort(lst):
@@ -20,6 +20,7 @@ def bubble_sort(lst):
             if sorted_list[i] > sorted_list[i+1]:
                 sorted_list[i], sorted_list[i+1] =\
                     sorted_list[i+1], sorted_list[i]
+        print sorted_list
         n += 1
     return sorted_list
 
@@ -36,7 +37,7 @@ def bubble_sort2(seq):
                 changed = True
     return seq
 
-print bubble_sort2(some_list)
+# print bubble_sort2(some_list)
 
 
 def insertion_sort(lst):
@@ -57,6 +58,6 @@ def selection_sort(list):
               iSmall = i
         list[index], list[iSmall] = list[iSmall], list[index]
 
-selection_sort(some_list)
-print some_list
+# selection_sort(some_list)
+# print some_list
 
