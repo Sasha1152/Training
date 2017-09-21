@@ -12,34 +12,6 @@ def sort_list(lst):
 # print sort_list(some_list)
 
 
-def bubble_sort(lst):
-    sorted_list = lst[:]
-    n = 1
-    while n < len(sorted_list):
-        for i in range(len(sorted_list)-n):
-            if sorted_list[i] > sorted_list[i+1]:
-                sorted_list[i], sorted_list[i+1] =\
-                    sorted_list[i+1], sorted_list[i]
-        print sorted_list
-        n += 1
-    return sorted_list
-
-print bubble_sort(some_list)
-
-
-def bubble_sort2(seq):
-    changed = True
-    while changed:
-        changed = False
-        for i in xrange(len(seq) - 1):
-            if seq[i] > seq[i + 1]:
-                seq[i], seq[i + 1] = seq[i + 1], seq[i]
-                changed = True
-    return seq
-
-# print bubble_sort2(some_list)
-
-
 def insertion_sort(lst):
     for i in xrange(1, len(lst)):
        j = i-1

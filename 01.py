@@ -1,14 +1,11 @@
-some_list = ['b', -4, 55, 444, 48, 1, 'a']
+a = [3, 2, 1, 0]
 
-n = 1
-while n < len(some_list):
-    for i in range(len(some_list) - n):
-        if some_list[i] > some_list[i + 1]:
-            some_list[i], some_list[i + 1] =\
-                some_list[i + 1], some_list[i]
-        print some_list
-    n += 1
-    print some_list
+for i in range(1, len(a)):
+   j = i - 1
+   key = a[i]
+   while (a[j] > key) and (j >= 0):
+      a[j+1] = a[j]
+      j -= 1
+   a[j+1] = key
 
-
-print some_list
+print a
