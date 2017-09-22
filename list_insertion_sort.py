@@ -17,12 +17,9 @@ print '---' * 8
 a = [3, 2, 1, 0]
 
 for i in range(1, len(a)):
-    print 'before:', a
     key = a[i]
-    while (a[i - 1] > key) and ((i - 1) >= 0):
-        a[i] = a[i - 1]
-        i -= 1
-        print a
-    a[i] = key
-
+    n = 1
+    while key < a[i - n] and (i - n) >= 0:
+        a[i] = a[i - n]
+        n += 1
 print a
