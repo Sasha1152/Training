@@ -1,12 +1,16 @@
-a = [3, 2, 1, 4]
+a = [3, 2, 1, 0, 5]
 
-i_min = 0
-for j in range(1, len(a)):
-    for i in range(j, len(a)):
-        if a[i_min] >= a[i]:
+
+for j in range(len(a)):
+    i_min = j    
+    for i in range(j, len(a) - 1):
+        if a[i + 1] <= a[i]:
+            i_min = i + 1
+        else:
             i_min = i
-        print a[i]
-    a[i], a[i_min] = a[i_min], a[i]
+        print a[i_min]
+        print a
+    a[j], a[i_min] = a[i_min], a[j]
 
 print a
 print '---' * 5
