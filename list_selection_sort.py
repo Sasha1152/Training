@@ -1,15 +1,17 @@
-a = [3, 2, 1, 'b', 'a']
+a = [3, 2, 1, 4]
 
-for index in range(0, len(a)):
-    i_min = index
-    for i in range(index, len(a)):
-       if a[i_min] > a[i]:
-          i_min = i
-    a[index], a[i_min] = a[i_min], a[index]
+i_min = 0
+for j in range(1, len(a)):
+    for i in range(j, len(a)):
+        if a[i_min] >= a[i]:
+            i_min = i
+        print a[i]
+    a[i], a[i_min] = a[i_min], a[i]
 
 print a
+print '---' * 5
 
-a = [3, 2, 1]
+a = [3, 2, 1, 4]
 for k in range(len(a) - 1):
         m = k
         i = k + 1
