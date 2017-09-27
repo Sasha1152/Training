@@ -1,9 +1,8 @@
-a = [3, 2, 1, 0]
+n = 5
+a, b = 0, 1
+while n >= 0:
+   a, b = a + b, a
+   n -= 1
+   print a, b
 
-for i in range(len(a) - 1):
-   for j in range(i + 1, len(a)):
-      if a[i] > a[j]:
-         a[i], a[j] = a[j], a[i]
-      print a
-
-print a
+print(b)
