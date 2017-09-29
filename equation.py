@@ -1,3 +1,8 @@
+"""
+this program solve a simple equation such as :
+x + 5 = 15, 45 / x = 8 etc. A numbers must be
+natural.
+"""
 while True:
     print 'enter equation(type "exit" to quit):'
     s_start = raw_input()
@@ -6,7 +11,7 @@ while True:
 
     s = s_start.split()
 
-    for i in range(0, 5, 2):
+    for i in range(0, 6, 2):
         try:
             s[i] = int(s[i])
             if i < 3:
@@ -49,7 +54,7 @@ while True:
         else:
             s[i] = str(s[i])
 
-    if (s[1] == '-' or '/') and s[2] == unknown:
+    if (s[1] == '-' or s[1] == '/') and s[2] == str(x):
         print '{} = {} {} {}'.format(unknown, known, antisign, result)
     else:
         print '{} = {} {} {}'.format(unknown, result, antisign, known)
