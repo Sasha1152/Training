@@ -23,3 +23,13 @@ for j in range(len(a) - 1):
             i += 1
         a[j], a[i_min] = a[i_min], a[j]
 print a
+
+
+a = [4, 2, 3, 0, 1, 12, -4, -44]
+for i in range(len(a)):
+    imin = i
+    for j in range(i, len(a)):
+        if a[j] < a[imin]:
+            imin = j
+    a[i], a[imin] = a[imin], a[i]
+print a
