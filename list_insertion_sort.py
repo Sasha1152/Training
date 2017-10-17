@@ -33,3 +33,12 @@ for i in range(1, len(a)):
         n -= 1
     a[n] = key
 print a
+
+a = ['c', 'b', 'a', 2, 8, -9]
+for i in range(1, len(a)):
+    temp = a[i]
+    while i:
+        if a[i - 1] > temp:
+            a[i], a[i - 1] = a[i - 1], temp
+        i -= 1
+print a
