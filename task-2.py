@@ -109,17 +109,17 @@ def recognize_file_type(file):
     return list_name_type[1]
 # print(recognize_file_type('monthly_reports.zip'))
 
-import random
+import random_sample
 def txt_size(file_type):
-    return random.randint(100, 200)
+    return random_sample.randint(100, 200)
 def zip_size(file_type):
-    return random.randint(200, 400)
+    return random_sample.randint(200, 400)
 def jpg_size(file_type):
-    return random.randint(400, 600)
+    return random_sample.randint(400, 600)
 def ttf_size(file_type):
-    return random.randint(600, 800)
+    return random_sample.randint(600, 800)
 def ini_size(file_type):
-    return random.randint(800, 1000)
+    return random_sample.randint(800, 1000)
 
 def size_of_file(name):
     file_type = recognize_file_type(name)

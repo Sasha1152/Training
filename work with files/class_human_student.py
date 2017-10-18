@@ -1,5 +1,5 @@
 import json
-import random
+import random_sample
 import string
 
 class Humans(object):
@@ -64,14 +64,14 @@ def random_data():
     data = {}
     list_upper_case = list(string.uppercase)
     list_lower_case = list(string.lowercase)
-    apper_leter = random.choice(list_upper_case)
-    apper_leter_2 = random.choice(list_upper_case)
-    lower_letters = reduce(lambda x, y: x + y, random.sample(list_lower_case, 3))
-    lower_letters_2 = reduce(lambda x, y: x + y, random.sample(list_lower_case, 5))
+    apper_leter = random_sample.choice(list_upper_case)
+    apper_leter_2 = random_sample.choice(list_upper_case)
+    lower_letters = reduce(lambda x, y: x + y, random_sample.sample(list_lower_case, 3))
+    lower_letters_2 = reduce(lambda x, y: x + y, random_sample.sample(list_lower_case, 5))
     data['name'] = apper_leter + lower_letters
     data['surname'] = apper_leter_2 + lower_letters_2
-    data['age'] = random.randint(16, 60)
-    data['gender'] = random.choice(['man', 'women'])
+    data['age'] = random_sample.randint(16, 60)
+    data['gender'] = random_sample.choice(['man', 'women'])
     return data
 
 # create file with random data for 100 student
@@ -84,7 +84,7 @@ with open('students.json', 'r') as my_file:
     data_base_students = json.loads(my_file.read())
 
 # random marks
-marks = [random.randint(0, 10) for mark in range(10)]
+marks = [random_sample.randint(0, 10) for mark in range(10)]
 
 def stud_info(data_student):
     ''' This function recives random data for 'Student' and returns information about it.
@@ -97,7 +97,7 @@ def stud_info(data_student):
                        data_student['gender'])
     return student
 
-number_stud = random.randint(0, 99)
+number_stud = random_sample.randint(0, 99)
 print(data_base_students[number_stud])
 print('student #%d name is '
       + str(stud_info(data_base_students[number_stud]).get_name()))\

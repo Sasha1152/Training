@@ -1,6 +1,6 @@
 def random_action(first_number, second_number):
     import random
-    first_number = int(first_number)*2
+    first_number = int(first_number)
     second_number = int(second_number)
     sign = random.choice('+-*/')
     
@@ -10,7 +10,7 @@ def random_action(first_number, second_number):
     if sign == '+':
         action = 'adding'
     elif sign == '-':
-        action = 'substracting'
+        action = 'subtracting'
     elif sign == '*':
         action = 'multiplying'
     elif sign == '/':
@@ -34,4 +34,5 @@ def random_action(first_number, second_number):
              print_answer()
       
     print('The end')
-random_action(89,9)
+
+random_action(5, 4)

@@ -1,6 +1,6 @@
 summa = 0
 for i in range (5):
-	summa += i
+    summa += i
 print(summa)
 
 summa = reduce(lambda x, y: x + y, range(5))

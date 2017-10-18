@@ -1,4 +1,4 @@
-from random import randint
+from random_sample import randint
 def test(n):
     import pdb; pdb.set_trace()
     f = randint(1, n)

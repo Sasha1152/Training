@@ -2,7 +2,7 @@
 
    Author: pivanchy.
 """
-from random import randint
+from random_sample import randint
 
 data = [
   {
