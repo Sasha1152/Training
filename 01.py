@@ -1,9 +1,15 @@
-a = [4, 2, 3, 0, 1, 12, -4, -44]
+class A(object):
+    def __init__(self, name):
+        self.name = name
 
-for i in range(len(a)):
-    imin = i
-    for j in range(i, len(a)):
-        if a[j] < a[imin]:
-            imin = j
-    a[i], a[imin] = a[imin], a[i]
-print a
+
+class B(A):
+    def __init__(self, name, age):
+        super(A, self).__init__(name)
+        self.age = age
+
+one = A('Sasha')
+print one.name
+
+two = B('Kate', '12')
+print two.age
