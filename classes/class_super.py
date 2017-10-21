@@ -5,11 +5,11 @@ class A(object):
 
 class B(A):
     def __init__(self, name, age):
-        super(A).__init__(name)
+        super(B, self).__init__(name)
         self.age = age
 
-one = A('Sasha')
-print one.name
+husband = A('Sasha')
+print husband.name
 
-two = B('Kate', '12')
-print two.age
+wife = B('Kate', '30')
+print wife.name, wife.age
