@@ -2,6 +2,9 @@ class A(object):
     def __init__(self, name):
         self.name = name
 
+    def pri(self):
+        print 'Hello!'
+
 
 class B(A):
     def __init__(self, name, age):
@@ -13,3 +16,6 @@ print husband.name
 
 wife = B('Kate', '30')
 print wife.name, wife.age
+
+husband.pri()
+wife.pri()
