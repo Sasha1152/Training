@@ -1,12 +1,7 @@
-n = int(input())
-m = 1
-while m < n:
-    for i in range(n - m):
-        print '.',
-    for i in range(m):
-        print '*',
-    m += 1
-    print
+class A(object):
+    def __init__(self, x):
+        self.x = x
 
-for i in range(n):
-    print '*',
+a = A(5)
+print a.x
+a.x = 5
