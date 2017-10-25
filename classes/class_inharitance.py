@@ -12,3 +12,4 @@ class B(A1, A2):
 
 b=B()
 b.fb()
+# print B.__mro__
