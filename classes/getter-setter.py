@@ -13,5 +13,11 @@ class Duck():
     name = property(get_name, set_name)
 
 obj = Duck('Howard')
-print obj.name
-print obj.get_name()
+print(obj.name)
+# the same:
+# print obj.get_name()
+obj.na = 'Donald'
+# the same:
+# obj.set_name('Donald')
+print(obj.na)
+
