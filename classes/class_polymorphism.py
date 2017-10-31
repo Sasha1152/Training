@@ -1,7 +1,7 @@
 class Based:
     def __init__(self, n):
         self.n = n
-    def out(self ):
+    def out(self):
         print self.n
 
 class One(Based):

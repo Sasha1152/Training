@@ -7,7 +7,7 @@ class A:
 
 husband = A('Sasha')
 
-print husband.name
-print husband.pri()
+print(husband.name)
+print(husband.pri())
 # the same:
-print A.pri(husband)
+print(A.pri(husband))

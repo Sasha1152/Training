@@ -1,3 +1,5 @@
+""" for Python 3"""
+
 class Duck():
     def __init__(self, input_name):
         self.hidden_name = input_name
@@ -16,8 +18,8 @@ obj = Duck('Howard')
 print(obj.name)
 # the same:
 # print obj.get_name()
-obj.na = 'Donald'
+obj.name = 'Donald' # inside the setter
 # the same:
 # obj.set_name('Donald')
-print(obj.na)
+print(obj.name)
 
