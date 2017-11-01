@@ -2,22 +2,21 @@
 
 class Duck():
     def __init__(self, input_name):
-        self.hidden_name = input_name
+        self.__name = input_name
 
     @property
     def name(self):
         print('inside the getter')
-        return self.hidden_name
+        return self.__name
 
     @name.setter
     def name(self, input_name):
         print('inside the setter')
-        self.hidden_name = input_name
+        self.__name = input_name
 
 obj = Duck('Howard')
 print(obj.name)
 obj.name = 'Donald' # inside the setter
 print(obj.name)
-
-print(obj.hidden_name)
-
+# obj.__name # AttributeError: 'Duck' object has no attribute '__name'
+print(obj._Duck__name)
