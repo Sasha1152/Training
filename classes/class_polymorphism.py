@@ -2,7 +2,7 @@ class Based:
     def __init__(self, n):
         self.n = n
     def out(self):
-        print self.n
+        print(self.n)
 
 class One(Based):
     def multi(self, m):

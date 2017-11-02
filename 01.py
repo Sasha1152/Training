@@ -1,1 +1,2 @@
-print(1 == eval('1'))
+a = 'asdsdfsghbgnf'
+print(a[3:9:2])
