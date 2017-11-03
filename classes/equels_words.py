@@ -3,10 +3,21 @@ class Word():
         self.text = text
 
     def equals(self, word2):
-        return self.text.lower() == word2.text.lower()
+        return self.text.lower() == word2.lower()
+
+    # def __str__(self):
+    #     return "it's str " + self.text
+
+    def __repr__(self):
+        return "it's repr " + self.text
 
 obj1 = Word('ha')
-odj2 = Word('HA')
+obj2 = Word('HA')
 obj3 = Word('eh')
 
-obj1.equals(obj2)
+print(obj1.text)
+print(obj1.equals('Ha'))
+print(obj1.equals('hA'))
+print(obj1)
+print(obj2)
+print(obj3)
