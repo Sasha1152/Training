@@ -1,2 +1,2 @@
 *.pyc
-mysite/project/__pycache__/
+.mysite/project/__pycache__/
