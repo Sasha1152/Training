@@ -45,6 +45,7 @@ def detail(request, question_id):
 class DetailView(generic.ListView):
     model = Question
     template_name = 'polls/detail.html'
+    context_object_name = 'question'
 
 """
 def results(request, question_id):
