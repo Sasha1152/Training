@@ -1,18 +1,20 @@
-<h1>{{ question.question_text }}</h1>
-<!--<ul>-->
-    <!--{% for choice in question.choice_set.all %}-->
-    <!--<li>{{ choice.choice_text }}</li>-->
-    <!--{% endfor %}-->
-<!--</ul>-->
+{% load i18n %}
 
-{% if error_message %}
-    <p><strong>{{ error_message }}</strong></p>
-{% endif %}
-<form action="{% url 'polls:vote' question.id %}" method="post">
+{% block content %}
+<h1>{{poll.question}}</h1>
+{% if poll.votable %}
+<form action="{% url 'polls:vote' poll.id %}" method="post">
     {% csrf_token %}
-    {% for choice in question.choice_set.all %}
-        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
-        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+    {% for choice in poll.choice_set.all %}
+    <label class="radio"><input type="radio" name="choice_pk" value="{{choice.id}}"> {{choice.choice}}</label>
     {% endfor %}
-    <input type="submit" value="vote" />
+    <input type="submit" class="btn btn-primary" value="{% trans "Vote" %}">
 </form>
+{% else %}
+<ul>
+{% for choice in poll.choice_set.all %}
+    <li>{{choice.choice}} - {{choice.count_votes}}</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
