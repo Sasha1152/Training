@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Planets(models.Model):
+class Planet(models.Model):
     planet_number = models.PositiveSmallIntegerField(primary_key=True)
     planet_name = models.CharField(max_length=30)
     planet_mass_to_earth = models.DecimalField(blank=True, max_digits=10, decimal_places=4, verbose_name='planet mass relative to an Earth')
@@ -18,8 +18,8 @@ class Planets(models.Model):
         return self.planet_name
 
 
-class Moons(models.Model):
-    planet_mother = models.ForeignKey(Planets, on_delete=models.CASCADE)
+class Moon(models.Model):
+    planet_mother = models.ForeignKey(Planet, on_delete=models.CASCADE)
     moon_number = models.PositiveSmallIntegerField(primary_key=True)
     moon_name = models.CharField(max_length=30)
 
