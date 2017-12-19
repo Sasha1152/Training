@@ -5,7 +5,7 @@ import datetime
 class CommonData(models.Model):
     name = models.CharField(max_length=30)
     number = models.PositiveSmallIntegerField(primary_key=True)
-    image = models.ImageField(blank=True, upload_to='images/')
+    image = models.ImageField(blank=True, upload_to='planets/images/')
     discovery_date = models.DateField(null=True, blank=True)
     description = models.TextField(blank=True)
     wiki = models.URLField(blank=True)
