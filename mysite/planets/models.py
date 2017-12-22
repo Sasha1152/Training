@@ -39,5 +39,4 @@ class Moon(CommonData):
         verbose_name_plural = 'moons'
 
     def __str__(self):
-        return str(self.planet_mother) + '--' + str(self.name)
-
+        return str(self.planet) + '--' + str(self.name)

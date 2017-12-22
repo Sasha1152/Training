@@ -9,7 +9,6 @@ class MoonInLine(admin.TabularInline):
 
 
 class PlanetAdmin(admin.ModelAdmin):
-    # fields = ['planet_number', 'planet_name']
     list_display = ('number',
                     'name',
                     'planet_mass_to_earth',
