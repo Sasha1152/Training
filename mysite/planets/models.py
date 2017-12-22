@@ -15,8 +15,8 @@ class CommonData(models.Model):
 class Planet(CommonData):
     number = models.PositiveSmallIntegerField(primary_key=True)
     name = models.CharField(max_length=30)
-    planet_mass_to_earth = models.DecimalField(blank=True, max_digits=10, decimal_places=4, verbose_name='Planet mass relative to an Earth')
-    orbital_speed = models.DecimalField(blank=True, max_digits=5, decimal_places=3, verbose_name='Average orbital speed, km/s')
+    planet_mass_to_earth = models.DecimalField(blank=True, null=True, max_digits=10, decimal_places=4, verbose_name='Planet mass relative to an Earth')
+    orbital_speed = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=3, verbose_name='Average orbital speed, km/s')
     moons_quantity = models.PositiveSmallIntegerField(blank=True, default=0)
 
     class Meta:
