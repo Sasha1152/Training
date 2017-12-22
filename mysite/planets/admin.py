@@ -5,7 +5,7 @@ from . models import Planet, Moon
 class MoonInLine(admin.TabularInline):
     model = Moon
     extra = 1
-    list_display = ('planet_mother') # ???
+    list_display = 'planet_mother'  # ???
 
 
 class PlanetAdmin(admin.ModelAdmin):
