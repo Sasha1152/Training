@@ -30,7 +30,7 @@ class Planet(CommonData):
 
 class Moon(CommonData):
     name = models.CharField(max_length=30, primary_key=True)
-    planet = models.ForeignKey(Planet, on_delete=models.CASCADE, related_name='planet_mother')
+    planet = models.ForeignKey(Planet, on_delete=models.CASCADE, related_name='moons')
     number = models.PositiveSmallIntegerField()
 
     class Meta:

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'polls.apps.PollsConfig',
     'planets.apps.PlanetsConfig',
+    'boards.apps.BoardsConfig',
 ]
 
 MIDDLEWARE = [
