@@ -20,7 +20,7 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'polls/', include('polls.urls'),),
-    url(r'^$', include('boards.urls'),),
+    url(r'^', include('boards.urls'),),
 ]
 
 # For static files
