@@ -1,2 +1,2 @@
 a = 'asdsdfsghbgnf'
-print(a[3:9:2])
+print(a[1:8:2])

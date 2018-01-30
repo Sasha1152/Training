@@ -7,7 +7,12 @@
 <body>
     <h1>Boards</h1>
     {% for board in boards %}
-      {{ board.name }} <br>
+      <td>
+        <a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a>
+        <small class="text-muted d-block">{{ board.description }}</small>
+      </td>
+      <td class="align-middle">0</td>
+      <td class="align-middle">0</td>
     {% endfor %}
 </body>
 </html>
