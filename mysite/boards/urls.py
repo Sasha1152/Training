@@ -3,6 +3,8 @@ from django.contrib import admin
 
 from . import views
 
+app_name = 'boards'
+
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
