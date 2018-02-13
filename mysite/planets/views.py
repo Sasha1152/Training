@@ -8,3 +8,7 @@ def home(request):
     planets = Planet.objects.all()
     # return HttpResponse(planets)
     return render(request, 'planets/home.html', {'planets': planets})
+
+
+def page_1(request):
+    return render(request, 'planets/page_1.html')
