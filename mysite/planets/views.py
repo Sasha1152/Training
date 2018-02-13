@@ -12,3 +12,7 @@ def home(request):
 
 def page_1(request):
     return render(request, 'planets/page_1.html')
+
+
+def page_2(request):
+    return HttpResponse("It's running function planet.views.page_2")
