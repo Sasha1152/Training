@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +8,10 @@
 <body>
     <h4>There is running file 'planets_list.html'</h4>
     <h2>Hello, planets!</h2>
+    <ul>
     {% for planet in planets %}
-        {{ planet }} <br/>
+        <li><a href="{% url 'planet:id' planet.id %}">{{ planet }} </a></li>
     {% endfor %}
+    </ul>
 </body>
 </html>

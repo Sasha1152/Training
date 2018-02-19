@@ -10,6 +10,12 @@ def planets_list(request):
     return render(request, 'planets_list.html', {'planets': planets})
 
 
+def planet_data(request, pk):
+    planet = Planet.objects.get(pk=pk)
+    # return HttpResponse(planet)
+    return render(request, 'planet_data.html', {'planet': planet})
+
+
 def page_1(request):
     return render(request, 'page_1.html')
 
