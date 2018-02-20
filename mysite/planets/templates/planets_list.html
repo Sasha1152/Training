@@ -7,10 +7,15 @@
 </head>
 <body>
     <h4>There is running file 'planets_list.html'</h4>
-    <h2>Hello, planets!</h2>
+    <h2>
+        These are planets of the solar system<br>
+        Click on name to see more
+    </h2>
     <ul>
     {% for planet in planets %}
-        <li><a href="{% url 'planet:id' planet.id %}">{{ planet }} </a></li>
+        <h2><li>{{ planet }}</li></h2>
+        <!--<li><a href='url'><h2>{{ planet }}</h2></a></li>-->
+
     {% endfor %}
     </ul>
 </body>
