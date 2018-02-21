@@ -9,7 +9,7 @@ class A(object):
         pass
 
     def pri(self):
-        print 'Hello!'
+        print('Hello!')
 
 
 class B(A):
@@ -18,17 +18,17 @@ class B(A):
         self.age = age
 
 husband = A('Sasha')
-print husband.name
+print(husband.name)
 A.pri(husband)
 
 wife = B('Kate', '30')
-print wife.name, wife.age
+print(wife.name, wife.age)
 
 husband.pri()
 wife.pri()
-print A.a
+print(A.a)
 A.a = 1
-print B.a
-print A.__doc__
-print A.__init__
-print B.__dict__
+print(B.a)
+print(A.__doc__)
+print(A.__init__)
+print(B.__dict__)

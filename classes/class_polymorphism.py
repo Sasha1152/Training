@@ -16,8 +16,9 @@ class Two(Based):
 
 
 obj1 = One(5)
-obj2 = Two('abc')
 obj1.multi(10)
 obj1.out()
+
+obj2 = Two('abc')
 obj2.inlist()
 obj2.out()
