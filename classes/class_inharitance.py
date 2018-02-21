@@ -1,10 +1,10 @@
 class A1:
     def fb(self):
-        print "class1"
+        print("class1")
 
 class A2:
     def fb(self):
-        print "class2"
+        print("class2")
 
 class B(A1, A2):
     def f(self):
@@ -12,4 +12,4 @@ class B(A1, A2):
 
 b=B()
 b.fb()
-# print B.__mro__
+print(B.__mro__)

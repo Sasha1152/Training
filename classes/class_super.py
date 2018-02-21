@@ -19,12 +19,11 @@ class B(A):
 
 husband = A('Sasha')
 print(husband.name)
+husband.pri()
 A.pri(husband)
 
 wife = B('Kate', '30')
 print(wife.name, wife.age)
-
-husband.pri()
 wife.pri()
 print(A.a)
 A.a = 1
