@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-{% load static %}
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Planets</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <h4>There is running file 'planets_list.html'</h4>
-    <h2>
-        These are planets of the solar system<br>
-        Click on name to see more
-    </h2>
-    <ul>
-    {% for planet in planets %}
-        <h2><li>{{ planet }}</li></h2>
-        <!--<li><a href='url'><h2>{{ planet }}</h2></a></li>-->
+    <div class="page-header">
+        <h4>There is running file 'planets_list.html'</h4>
+        <h2>
+            These are planets of the solar system<br>
+            Click on name to see more
+        </h2>
+    </div>
 
+
+    {% for planet in planets %}
+        <h2>
+        <ol type="1">
+        <li><a href=''>{{ planet }}</a></li>
+        </ol>
+        </h2>
     {% endfor %}
-    </ul>
+
 </body>
 </html>
