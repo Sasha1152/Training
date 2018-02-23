@@ -1,21 +1,26 @@
-li a {
-    color: blue;
-    font-size: 5em;
-}
+ol {
+    color: red
+    }
 
 body {
-    background: white url("images/planets_background.jpg") no-repeat right bottom;
+    background: url("planets_background.jpg");
+    background-color: #FFE4B5;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left top;
     background-size: cover;
     padding-left: 50px;
+    padding-right: 50px;
 }
 
 h2 a {
-    color: #FCA205;
-    font-family: 'Lobster';
+    color: DarkOrange;
+    font-family: 'MV Boli';
 }
 
 .page-header {
-    background-color: #ff9400;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    background-color: darkorange;
+    margin-top: 20;
+    padding: 10px 10px 10px 50px;
+    font-family: 'MV Boli';
 }
