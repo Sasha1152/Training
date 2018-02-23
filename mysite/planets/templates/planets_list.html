@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-<html lang="en">
+{% extends 'base_planets.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Planets</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-
-<body>
+{% block planets_list %}
     <div class="page-header">
         <h2>
             These are planets of the solar system<br>
@@ -18,12 +10,8 @@
 
     <ol type="1">
     {% for planet in planets %}
-        <h2>
-        <li><a href=''>{{ planet }}</a></li>
-        </h2>
+        <h2><li><a href='{{ planet_number }}'>{{ planet }}</a></li></h2>
     {% endfor %}
     </ol>
 
-</body>
-
-</html>
+{% endblock planets_list%}
