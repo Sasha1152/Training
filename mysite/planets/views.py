@@ -1,13 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from . models import Planet
+import datetime
 
 
-def planets_list(request, pk):
+def planets_list(request):
     # return HttpResponse('Planets. The home page')
     planets = Planet.objects.all()
     # return HttpResponse(planets)
-    return render(request, 'planets_list.html', {'planets': planets, 'planet_number': pk})
+    now = datetime.datetime.now()
+    return render(request, 'planets_list.html', {'planets': planets, 'now': now})
 
 
 def planet_data(request, pk):

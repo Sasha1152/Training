@@ -1,26 +1,33 @@
 ol {
-    color: red
+    color: red;
     }
 
 body {
     background: url("planets_background.jpg");
-    background-color: #FFE4B5;
+    background-color: #FFE2B0;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left top;
     background-size: cover;
     padding-left: 50px;
     padding-right: 50px;
+    font-family: 'MV Boli';
+    line-height: 3;
 }
 
 h2 a {
     color: DarkOrange;
-    font-family: 'MV Boli';
+    line-height: 2;
 }
 
 .page-header {
     background-color: darkorange;
     margin-top: 20;
     padding: 10px 10px 10px 50px;
-    font-family: 'MV Boli';
+}
+
+.page-footer {
+    background-color: darkorange;
+    margin-bottom: 20;
+    padding: 10px 10px 10px 20px;
 }

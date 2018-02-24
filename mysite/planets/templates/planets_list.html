@@ -8,10 +8,16 @@
         </h2>
     </div>
 
+    <h2>
     <ol type="1">
     {% for planet in planets %}
-        <h2><li><a href='{{ planet_number }}'>{{ planet }}</a></li></h2>
+        <li><a href=''>{{ planet }}</a></li>
     {% endfor %}
     </ol>
+    </h2>
+
+    <div class="page-footer" align="right">
+        It is now: {{ now }}
+    </div>
 
 {% endblock planets_list%}
