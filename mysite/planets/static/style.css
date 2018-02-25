@@ -21,13 +21,14 @@ h2 a {
 }
 
 .page-header {
-    background-color: darkorange;
+    background-color: DarkOrange;
     margin-top: 20;
     padding: 10px 10px 10px 50px;
+    line-height: 1;
 }
 
 .page-footer {
-    background-color: darkorange;
-    margin-bottom: 20;
-    padding: 10px 10px 10px 20px;
+    background-color: DarkOrange;
+    margin-bottom: 10;
+    padding: 10px 10px 10px 10px;
 }
