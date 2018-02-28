@@ -1,23 +1,10 @@
 <h4>There is running file 'polls/detail.html'</h4>
 
+<!--<h2>{{ question }}</h2>-->
 
-{% load i18n %}
-
-{% block content %}
-<h1>{{poll.question}}</h1>
-{% if poll.votable %}
-<form action="{% url 'polls:vote' poll.id %}" method="post">
-    {% csrf_token %}
-    {% for choice in poll.choice_set.all %}
-    <label class="radio"><input type="radio" name="choice_pk" value="{{choice.id}}"> {{choice.choice}}</label>
-    {% endfor %}
-    <input type="submit" class="btn btn-primary" value="{% trans 'Vote' %}">
-</form>
-{% else %}
+<h1>{{ question.question_text }}</h1>
 <ul>
-{% for choice in poll.choice_set.all %}
-    <li>{{choice.choice}} - {{choice.count_votes}}</li>
+{% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }}</li>
 {% endfor %}
 </ul>
-{% endif %}
-{% endblock %}
