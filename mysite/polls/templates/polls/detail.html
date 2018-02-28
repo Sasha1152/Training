@@ -3,6 +3,8 @@
 <!--<h2>{{ question }}</h2>-->
 
 <h1>{{ question.question_text }}</h1>
+<h3>Was published: {{ question.pub_date }}</h3>
+<h3>'question.choice_set.all': {{ question.choice_set.all }}</h3>
 <ul>
 {% for choice in question.choice_set.all %}
     <li>{{ choice.choice_text }}</li>
