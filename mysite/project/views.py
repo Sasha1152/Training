@@ -4,8 +4,8 @@ import datetime
 
 
 def homepage(request):
-    return HttpResponse("<h1>It's home page</h1>")
-    # return render(request, 'homepage.html')
+    # return HttpResponse("<h1>It's home page</h1>")
+    return render(request, 'project:homepage')
 
 
 def current_datetime(request):

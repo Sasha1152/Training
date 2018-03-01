@@ -11,7 +11,7 @@
     <h2>
     <ol type="1">
     {% for planet in planets %}
-        <li><a href='?'>{{ planet }}</a></li>
+        <li><a href="{% url 'planets:planet_data' planet.name">{{ planet }}</a></li>
     {% endfor %}
     </ol>
     </h2>
