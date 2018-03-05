@@ -7,13 +7,12 @@ ol {
     }
 
 h2 a {
-    color: green;
+    color: OrangeRed;
     line-height: 1;
     }
 
 body {
     background: url("planets_background.jpg");
-    background-color: #FFE2B0;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left top;
@@ -25,14 +24,13 @@ body {
 }
 
 .page-header {
-    background-color: DarkOrange;
     margin-top: 20;
     padding: 10px 10px 10px 10px;
     line-height: 1;
 }
 
 .page-footer {
-    background-color: DarkOrange;
+    color: gold;
     margin-bottom: 10;
     padding: 5px 5px 5px 5px;
     line-height: 1;
