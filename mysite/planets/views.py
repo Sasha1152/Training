@@ -7,9 +7,10 @@ import datetime
 def planets_list(request):
     # return HttpResponse('Planets. The home page')
     planets = Planet.objects.all()
+    earth = Planet.objects.get(pk=3)
     # return HttpResponse(planets)
     now = datetime.datetime.now()
-    return render(request, 'planets_list.html', {'planets': planets, 'now': now})
+    return render(request, 'planets_list.html', {'planets': planets, 'now': now, 'earth': earth})
 
 
 def planet_data(request, pk):

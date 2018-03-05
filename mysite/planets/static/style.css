@@ -1,5 +1,14 @@
+h2 {
+    color: brown;
+    }
+
 ol {
     color: red;
+    }
+
+h2 a {
+    color: green;
+    line-height: 1;
     }
 
 body {
@@ -12,11 +21,6 @@ body {
     padding-left: 50px;
     padding-right: 50px;
     font-family: 'MV Boli';
-    line-height: 3;
-}
-
-h2 a {
-    color: DarkOrange;
     line-height: 2;
 }
 
