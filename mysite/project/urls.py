@@ -22,7 +22,7 @@ app_name = 'project'
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^homepage/', views.homepage),
+    url(r'^homepage/', views.homepage, name='homepage'),
     url(r'planets/', include('planets.urls')),
     url(r'polls/', include('polls.urls')),
     url(r'boards/', include('boards.urls')),
