@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.conf import settings
 from . import views
 
-app_name = 'project'
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

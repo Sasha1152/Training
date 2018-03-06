@@ -5,7 +5,7 @@ import datetime
 
 def homepage(request):
     # return HttpResponse("<h1>It's home page</h1>")
-    return render(request, 'project:homepage')
+    return render(request, 'homepage.html')
 
 
 def current_datetime(request):
