@@ -10,7 +10,7 @@ def planets_list(request):
     earth = Planet.objects.get(pk=3)
     # return HttpResponse(planets)
     now = datetime.datetime.now()
-    return render(request, 'planets_list.html', {'planets': planets, 'now': now, 'earth': earth})
+    return render(request, 'planets_list.html', {'planets': planets, 'now': now})
 
 
 def planet_data(request, number):

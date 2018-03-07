@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-<html lang="en">
+{% extends 'base_planets.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>{{ planet }}</title>
-</head>
+{% block title %} {{ planet }} {% endblock title %}
 
-<body>
-    {{ planet }} {{ pk }}
-</body>
+{% block planets_data %}
+    <h1>{{ planet }} {{ number }}</h1>
 
-</html>
+{% endblock planets_data %}

@@ -7,14 +7,11 @@
             Click on name to see more
         </h2>
     </div>
-    <h2>{{ earth }}</h2>
-
     <ol type="1">
         {% for planet in planets %}
-            <li><h2><a href=" 3 ">{{ planet }}</a></h2></li>
+            <li><a href="{% url 'planets:planet_data' planet.number %}">{{ planet }}</a></li>
         {% endfor %}
     </ol>
-
 
     <div class="page-footer" align="right">
         It is now: {{ now }}

@@ -4,13 +4,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Planets</title>
+    <title>{% block title %} Planets {% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body>
-    {% block planets_list %}
-    {% endblock planets_list %}
+    {% block planets_list %} {% endblock planets_list %}
+    {% block planets_data %} {% endblock planets_data %}
 </body>
 
 </html>

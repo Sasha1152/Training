@@ -7,9 +7,9 @@
 <body>
     <h4>There is running file 'homepage.html'</h4>
     <h2>
-    <a href=" ">Boards</a><br>
-    <a href=" ">Polls</a><br>
-    <a href=" ">Planets</a><br>
+    <a href="{% url 'boards:home' %}">Boards</a><br>
+    <a href="{% url 'polls:index' %}">Polls</a><br>
+    <a href="{% url 'planets:planets_list' %}">Planets</a><br>
     </h2>
 </body>
 </html>

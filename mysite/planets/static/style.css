@@ -6,7 +6,7 @@ ol {
     color: red;
     }
 
-h2 a {
+a {
     color: OrangeRed;
     line-height: 1;
     }
@@ -20,13 +20,15 @@ body {
     padding-left: 50px;
     padding-right: 50px;
     font-family: 'MV Boli';
-    line-height: 2;
+    color: OrangeRed;
+    font-size: 1.5em;
+    line-height: 1.5;
 }
 
 .page-header {
     margin-top: 20;
     padding: 10px 10px 10px 10px;
-    line-height: 1;
+    line-height: 1.5;
 }
 
 .page-footer {
