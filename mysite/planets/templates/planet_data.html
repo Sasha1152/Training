@@ -2,7 +2,9 @@
 
 {% block title %} {{ planet }} {% endblock title %}
 
-{% block planets_data %}
-    <h1>{{ planet }} {{ number }}</h1>
+{% block planet_data %}
+    <h1>#{{ number }} {{ planet }} </h1>
 
-{% endblock planets_data %}
+    <img src="{% static 'planets/Earth.jpg' %}" alt="My image"/>
+
+{% endblock planet_data %}

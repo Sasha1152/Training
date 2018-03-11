@@ -3,7 +3,7 @@ import datetime
 
 
 class CommonData(models.Model):
-    image = models.ImageField(blank=True, upload_to='planets/images/')
+    image = models.ImageField(blank=True, null=True, upload_to='planets/images/')
     discovery_date = models.DateField(null=True, blank=True)
     description = models.TextField(blank=True)
     wiki = models.URLField(blank=True)
