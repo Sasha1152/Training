@@ -6,8 +6,8 @@
     <h1>#{{ number }} {{ planet }} </h1>
 
     {% if planet.image %}
-        {% load static from staticfiles %}
-        <img src="{% static 'planets.images'  %}" alt="{{ planet.name }}" height="400" width="400" title="{{ planet.name }}"/>
+        {% load staticfiles %}
+        <img src="{% static 'images/Earth.jpg' %}" alt="{{ planet.name }}" height="400" width="400" title="{{ planet.name }}"/>
     {% endif %}
 
 {% endblock planet_data %}
