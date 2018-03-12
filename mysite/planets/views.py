@@ -15,7 +15,6 @@ def planets_list(request):
 
 def planet_data(request, number):
     planet = Planet.objects.get(pk=number)
-    image = planet.image
     # return HttpResponse(planet)
-    return render(request, 'planet_data.html', {'planet': planet, 'number': number, 'image': image})
+    return render(request, 'planet_data.html', {'planet': planet, 'number': number})
 
