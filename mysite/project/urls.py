@@ -27,7 +27,7 @@ urlpatterns = [
     url(r'planets/', include('planets.urls')),
     url(r'polls/', include('polls.urls')),
     url(r'boards/', include('boards.urls')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # For static files
 if settings.DEBUG:

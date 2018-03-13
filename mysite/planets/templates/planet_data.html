@@ -4,10 +4,17 @@
 
 {% block planet_data %}
     <h1>#{{ number }} {{ planet }} </h1>
-
+    <hr>
     {% if planet.image %}
         {% load staticfiles %}
-        <img src="{% static 'images/Earth.jpg' %}" alt="{{ planet.name }}" height="400" width="400" title="{{ planet.name }}"/>
+        <!--<img src="{% static 'images/Earth.jpg' %}" alt="{{ planet.name }}" height="400" width="400" title="{{ planet.name }}"/>-->
+        <!--<img src="{{ MEDIA_URL }}{{ planet.image.url }}" alt="{{ planet.name }}" height="400" width="400" title="{{ planet.name }}"/>-->
+        <img src="{{ planet.image.url }}" alt="{{ planet.name }}" width="400" title="{{ planet.name }}"/>
     {% endif %}
+    <h5>{{ planet.description|safe }}</h5>
+    <hr>
+    <div class="page-footer" align="right">
+        <a href="{{ planet.wiki }}">look to Wikipedia >>></a>
+    </div>
 
 {% endblock planet_data %}
