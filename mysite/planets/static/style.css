@@ -3,7 +3,7 @@ h1 {
     }
 
 h3 {
-    color: brown;
+    color: SandyBrown;
     }
 
 ol {
@@ -56,3 +56,11 @@ img {
     float: left;
     margin: 0px 20px 20px 0;
 }
+
+table, td, th {
+    border: 1px solid green;
+    border-collapse: collapse;
+    padding: 7px;
+}
+
+tr:hover { background-color: #4A708B; }

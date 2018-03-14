@@ -7,11 +7,35 @@
             Click on name to see brief description
         </h3>
     </div>
-    <ol type="1">
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>View</th>
+            <th>Name</th>
+            <th>Planet mass<br> relative to<br> an Earth</th>
+            <th>Average orbital<br> speed, km/s</th>
+            <th>Quantity<br> of moons</th>
+            <th>Discovery<br> date</th>
+        </tr>
         {% for planet in planets %}
-            <li><a href="{% url 'planets:planet_data' planet.number %}">{{ planet }}</a></li>
+            <tr>
+                <td>{{ planet.number }}</td>
+                <td><img src="{{ planet.image.url }}" alt="{{ planet.name }}" width="50"/></td>
+                <td><a href="{% url 'planets:planet_data' planet.number %}">{{ planet }}</a></td>
+                <td>{{ planet.planet_mass_to_earth }}</td>
+                <td>{{ planet.orbital_speed }}</td>
+                <td>{{ planet.moons_quantity }}</td>
+                <td>{{ planet.discovery_date}}</td>
+            </tr>
         {% endfor %}
-    </ol>
+    </table>
+
+    <!--<ol type="1">-->
+        <!--{% for planet in planets %}-->
+            <!--<li><a href="{% url 'planets:planet_data' planet.number %}">{{ planet }}</a></li>-->
+        <!--{% endfor %}-->
+    <!--</ol>-->
 
     <div class="page-footer" align="right">
         It is now: {{ now }}
