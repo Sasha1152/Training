@@ -23,7 +23,7 @@ body {
     background-size: cover;
     padding-left: 50px;
     padding-right: 50px;
-    font-family: 'MV Boli';
+    font-family: 'Harmattan', sans-serif;
     color: OrangeRed;
     font-size: 1.5em;
     line-height: 1.5;
@@ -58,7 +58,7 @@ img {
 }
 
 table, td, th {
-    border: 1px solid green;
+    border: 2px solid green;
     border-collapse: collapse;
     padding: 7px;
 }
