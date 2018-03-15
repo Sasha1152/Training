@@ -25,7 +25,7 @@ body {
     padding-right: 50px;
     font-family: 'Harmattan', sans-serif;
     color: OrangeRed;
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 1.5;
 }
 
@@ -54,7 +54,12 @@ p {
 
 img {
     float: left;
-    margin: 0px 20px 20px 0;
+    margin: 0px 20px 20px 0px;
+}
+
+table img {
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
 }
 
 table, td, th {

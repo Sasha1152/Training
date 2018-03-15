@@ -21,7 +21,7 @@
         {% for planet in planets %}
             <tr>
                 <td>{{ planet.number }}</td>
-                <td><img src="{{ planet.image.url }}" alt="{{ planet.name }}" width="70" cellpadding="5"/></td>
+                <td><img src="{{ planet.image.url }}" alt="{{ planet.name }}" width="70"/></td>
                 <td><a href="{% url 'planets:planet_data' planet.number %}">{{ planet }}</a></td>
                 <td>{{ planet.planet_mass_to_earth }}</td>
                 {% if planet.orbital_speed %}
