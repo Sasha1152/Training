@@ -9,12 +9,24 @@ class MoonInLine(admin.TabularInline):
 
 
 class PlanetAdmin(admin.ModelAdmin):
-    list_display = ('number',
-                    'name',
-                    'planet_mass_to_earth',
-                    'orbital_speed',
-                    'moons_quantity',
-                    'image',)
+    list_display = (
+        'number',
+        'name',
+        'planet_mass_to_earth',
+        'mean_radius_to_earth',
+        'semi_major_axis',
+        'orbital_speed',
+        'orbital_period',
+        'rotation_period',
+        'escape_velocity',
+        'surface_gravity',
+        'surface_pressure',
+        'moons_quantity',
+        'discovery_date',
+        'image',
+        'symbol',
+
+    )
     inlines = [MoonInLine]
 
 admin.site.register(Planet, PlanetAdmin)

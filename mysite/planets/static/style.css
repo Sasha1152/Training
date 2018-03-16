@@ -21,11 +21,11 @@ body {
     background-attachment: fixed;
     background-position: left top;
     background-size: cover;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-family: 'Harmattan', sans-serif;
     color: OrangeRed;
-    font-size: 2em;
+    font-size: 30px;
     line-height: 1.5;
 }
 
@@ -66,6 +66,9 @@ table, td, th {
     border: 2px solid green;
     border-collapse: collapse;
     padding: 7px;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 0.8em;
 }
 
 tr:hover { background-color: #4A708B; }

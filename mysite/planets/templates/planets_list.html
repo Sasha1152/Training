@@ -12,9 +12,17 @@
         <tr>
             <th>#</th>
             <th>View</th>
+            <th>Symbol</th>
             <th>Name</th>
             <th>Planet mass<br> relative to<br> an Earth</th>
+            <th>Semi major axis, AU</th>
+            <th>Mean radius<br> relativ to<br> an Earth</th>
             <th>Average orbital<br> speed, km/s</th>
+            <th>Orbital period, day</th>
+            <th>Rotation period, day</th>
+            <th>Escape velocity, km/s</th>
+            <th>Surface gravity, g</th>
+            <th>Surface pressure, bar</th>
             <th>Quantity<br> of moons</th>
             <th>Discovery<br> date</th>
         </tr>
@@ -33,7 +41,7 @@
                 {% if planet.planet.discovery_date %}
                     <td>{{ planet.discovery_date}}</td>
                 {% else %}
-                    <td>-</td>
+                    <td>?</td>
                 {% endif %}
             </tr>
         {% endfor %}

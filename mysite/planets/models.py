@@ -4,6 +4,12 @@ import datetime
 
 class CommonData(models.Model):
     image = models.ImageField(blank=True, null=True, upload_to='planets/images/')
+    symbol = models.ImageField(blank=True, null=True, upload_to='planets/images/')
+    escape_velocity = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=2, verbose_name='Escape velocity, km/s')
+    surface_gravity = models.DecimalField(blank=True, null=True, max_digits=4, decimal_places=3, verbose_name='Surface gravity, g')
+    orbital_period = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=1, verbose_name='Orbital period, day')
+    mean_radius_to_earth = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=3, verbose_name='Planet radius relative to an Earth')
+    surface_pressure = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=1, verbose_name='Surface pressure, bar')
     discovery_date = models.DateField(null=True, blank=True)
     description = models.TextField(blank=True)
     wiki = models.URLField(blank=True)
@@ -18,6 +24,8 @@ class Planet(CommonData):
     planet_mass_to_earth = models.DecimalField(blank=True, null=True, max_digits=10, decimal_places=4, verbose_name='Planet mass relative to an Earth')
     orbital_speed = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=3, verbose_name='Average orbital speed, km/s')
     moons_quantity = models.PositiveSmallIntegerField(blank=True, default=0)
+    rotation_period = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=1, verbose_name='Rotation period, day')
+    semi_major_axis = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=3, verbose_name='Semi major axis, AU')
 
     class Meta:
         ordering = ['number']
