@@ -15,14 +15,14 @@
             <th>Symbol</th>
             <th>Name</th>
             <th>Planet mass<br> relative to<br> an Earth</th>
-            <th>Semi major axis, AU</th>
             <th>Mean radius<br> relativ to<br> an Earth</th>
-            <th>Average orbital<br> speed, km/s</th>
-            <th>Orbital period, day</th>
             <th>Rotation period, day</th>
+            <th>Orbital period, day</th>
+            <th>Average orbital<br> speed, km/s</th>
             <th>Escape velocity, km/s</th>
             <th>Surface gravity, g</th>
             <th>Surface pressure, bar</th>
+            <th>Semi major axis, AU</th>
             <th>Quantity<br> of moons</th>
             <th>Discovery<br> date</th>
         </tr>
@@ -30,13 +30,18 @@
             <tr>
                 <td>{{ planet.number }}</td>
                 <td><img src="{{ planet.image.url }}" alt="{{ planet.name }}" width="70"/></td>
+                <td></td>
+                {# <td><img src="{{ planet.symbol.url }}" alt="symbol" width="25"></td> #}
                 <td><a href="{% url 'planets:planet_data' planet.number %}">{{ planet }}</a></td>
                 <td>{{ planet.planet_mass_to_earth }}</td>
-                {% if planet.orbital_speed %}
-                    <td>{{ planet.orbital_speed }}</td>
-                {% else %}
-                    <td>-</td>
-                {% endif %}
+                <td>{{ planet.mean_radius_to_earth }}</td>
+                <td>{{ planet.rotation_period }}</td>
+                <td>{{ planet.orbital_period }}</td>
+                <td>{{ planet.orbital_speed }}</td>
+                <td>{{ planet.escape_velocity }}</td>
+                <td>{{ planet.surface_gravity }}</td>
+                <td>{{ planet.surface_pressure }}</td>
+                <td>{{ planet.semi_major_axis }}</td>
                 <td>{{ planet.moons_quantity }}</td>
                 {% if planet.planet.discovery_date %}
                     <td>{{ planet.discovery_date}}</td>
