@@ -58,8 +58,8 @@ img {
 }
 
 table img {
-    margin: 0px 0px 0px 0px;
-    padding: 0px;
+    float: center;
+    margin: 0px;
 }
 
 table, td, th {
