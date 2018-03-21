@@ -7,23 +7,20 @@ while n < len(a):
             a[i], a[i + 1] =\
                 a[i + 1], a[i]
     n += 1
-print a
-
-print '---'*5
+print(a)
+print('---'*5)
 
 a = [3, 1, 2]
 
 n = len(a)
-replace = 0
 while n:
     for i in range(n - 1):
         if a[i] > a[i + 1]:
             a[i], a[i + 1] =\
                 a[i + 1], a[i]
     n -= 1
-print a
-
-print '---'*5
+print(a)
+print('---'*5)
 
 a = [3, 0.5, 2, 1]
 
@@ -35,9 +32,8 @@ while changed:
             a[i], a[i + 1] =\
                 a[i + 1], a[i]
             changed = True
-print a
-
-print '---'*5
+print(a)
+print('---'*5)
 
 a = [3, 2, 1, 0]
 
@@ -49,4 +45,4 @@ while n:
         # print a
     n -= 1
     # print a
-print a
+print(a)
