@@ -1,6 +1,7 @@
 {% extends 'base_planets.html' %}
-
+{% load static %}
 {% block planets_list %}
+
     <div class="page-header">
         <h3>
             These are planets of the solar system<br>
@@ -61,15 +62,8 @@
         {% endfor %}
     </table>
 
-    <!--<ol type="1">-->
-        <!--{% for planet in planets %}-->
-            <!--<li><a href="{% url 'planets:planet_data' planet.number %}">{{ planet }}</a></li>-->
-        <!--{% endfor %}-->
-    <!--</ol>-->
-
-
-        <script src="graphic.js"></script>
-
+    <script src="{% static 'chart.js' %}"></script>
+    <!--<div id="line_top_x"></div>-->
 
     <div class="page-footer" align="right">
         It is now: {{ now }}
