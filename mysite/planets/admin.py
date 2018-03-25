@@ -2,10 +2,14 @@ from django.contrib import admin
 from . models import Planet, Moon
 
 
-class MoonInLine(admin.TabularInline):
-    model = Moon
-    extra = 1
-    list_display = 'planet_mother'  # ???
+# class MoonInLine(admin.TabularInline):
+#     model = Moon
+#     extra = 1
+#     list_display = (
+#         'planet_mother',
+#         'name',
+#         'escape_velocity',
+#     )
 
 
 class PlanetAdmin(admin.ModelAdmin):
@@ -27,6 +31,21 @@ class PlanetAdmin(admin.ModelAdmin):
         'symbol',
 
     )
-    inlines = [MoonInLine]
+    # inlines = [MoonInLine]
+
+class MoonAdmin(admin.ModelAdmin):
+    list_display = (
+        'planet',
+        'number',
+        'name',
+        'escape_velocity',
+        'mean_radius_to_earth',
+        'surface_gravity',
+        'orbital_period',
+        'discovery_date',
+        'image',
+        'symbol',
+    )
 
 admin.site.register(Planet, PlanetAdmin)
+admin.site.register(Moon, MoonAdmin)

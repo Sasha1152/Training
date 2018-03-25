@@ -4,19 +4,20 @@
 
     <div class="page-header">
         <h3>
-            These are planets of the solar system<br>
-            Click on name to see brief description
+            The table shows brief main characteristics of the planets of the solar system.
+            Click on name to see description
         </h3>
     </div>
 
+    <!--Planets-->
     <table>
         <tr>
             <th>#</th>
             <th>View</th>
             <th>Symbol</th>
             <th>Name</th>
-            <th>Planet mass<br> relative to<br> an Earth</th>
-            <th>Mean radius<br> relativ to<br> an Earth</th>
+            <th>Mass<br> relative to<br> an Earth</th>
+            <th>Mean radius<br> relative to<br> an Earth</th>
             <th>Rotation period</th>
             <th>Orbital period</th>
             <th>Average orbital<br> speed, km/s</th>
@@ -62,11 +63,63 @@
         {% endfor %}
     </table>
 
+
+    <p>
+    <!--Moons -->
+    <table>
+        <tr>
+            <th>Mother planet</th>
+            <th>Number</th>
+            <th>View</th>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Orbital period</th>
+            <th>Escape velocity, km/s</th>
+            <th>Surface gravity, g</th>
+            <th>Discovery<br> date</th>
+        </tr>
+        {% for moon in moons %}
+            <tr>
+                <td>{{ moon.planet }}</td>
+                <td>{{ moon.number }}</td>
+
+                {% if moon.image %}
+                    <td><img src="{{ moon.image.url }}" alt="{{ moon.name }}" width="70"> </td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+
+                {% if moon.symbol %}
+                    <td><img src="{{ moon.symbol.url }}" alt="{{ moon.name }}" width="20"> </td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+
+                <td><a href="{% url 'planets:planet_data' moon.number">{{ moon.name }}</a></td>
+                <td>{{ moon.orbital_period }}</td>
+                <td>{{ moon.escape_velocity }}</td>
+                <td>{{ moon.surface_gravity }}</td>
+                <td>{{ moon.discovery_date }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
     <script src="{% static 'chart.js' %}"></script>
-    <!--<div id="line_top_x"></div>-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <div id="chart_div"></div>
 
     <div class="page-footer" align="right">
-        It is now: {{ now }}
-    </div>
 
+        <em>
+            "The Earth is what we all have in common"<br>
+            - Wendell Berry
+        </em>
+    </div>
+    <hr>
+    <h6>
+        This site is in a state of development<br>
+        All information was taken from Wikipedia<br>
+        It is now: {{ now }}
+    </h6>
 {% endblock planets_list%}
