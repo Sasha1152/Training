@@ -1,125 +1,125 @@
 {% extends 'base_planets.html' %}
 {% load static %}
 {% block planets_list %}
+<head>
+    <script type="text/javascript" src="{% static 'chart_speed.js' %}"></script>
+</head>
+<div class="page-header">
+    <h3>
+        The table shows brief main characteristics of the planets of the solar system.
+        Click on name to see description
+    </h3>
+</div>
 
-    <div class="page-header">
-        <h3>
-            The table shows brief main characteristics of the planets of the solar system.
-            Click on name to see description
-        </h3>
-    </div>
-
-    <!--Planets-->
-    <table>
+<!--Planets-->
+<table>
+    <tr>
+        <th>#</th>
+        <th>View</th>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Mass<br> relative to<br> an Earth</th>
+        <th>Mean radius<br> relative to<br> an Earth</th>
+        <th>Rotation period</th>
+        <th>Orbital period</th>
+        <th>Average orbital<br> speed, km/s</th>
+        <th>Escape velocity, km/s</th>
+        <th>Surface gravity, g</th>
+        <th>Semi major axis, AU</th>
+        <th>Quantity<br> of moons</th>
+        <th>Discovery<br> date</th>
+    </tr>
+    {% for planet in planets %}
         <tr>
-            <th>#</th>
-            <th>View</th>
-            <th>Symbol</th>
-            <th>Name</th>
-            <th>Mass<br> relative to<br> an Earth</th>
-            <th>Mean radius<br> relative to<br> an Earth</th>
-            <th>Rotation period</th>
-            <th>Orbital period</th>
-            <th>Average orbital<br> speed, km/s</th>
-            <th>Escape velocity, km/s</th>
-            <th>Surface gravity, g</th>
-            <th>Semi major axis, AU</th>
-            <th>Quantity<br> of moons</th>
-            <th>Discovery<br> date</th>
+            <td>{{ planet.number }}</td>
+
+            {% if planet.image %}
+                <td><img src="{{ planet.image.url }}" alt="{{ planet.name }}" width="70"/></td>
+            {% else %}
+                <td></td>
+            {% endif %}
+
+            {% if planet.symbol %}
+                <td><img src="{{ planet.symbol.url }}" alt="symbol" width="20"></td>
+            {% else %}
+                <td></td>
+            {% endif %}
+
+            <td><a href="{% url 'planets:planet_data' planet.number %}">{{ planet }}</a></td>
+            <td>{{ planet.planet_mass_to_earth }}</td>
+            <td>{{ planet.mean_radius_to_earth }}</td>
+            <td>{{ planet.rotation_period|safe }}</td>
+            <td>{{ planet.orbital_period }}</td>
+            <td>{{ planet.orbital_speed }}</td>
+            <td>{{ planet.escape_velocity }}</td>
+            <td>{{ planet.surface_gravity }}</td>
+            <td>{{ planet.semi_major_axis }}</td>
+            <td>{{ planet.moons_quantity }}</td>
+
+            {% if planet.discovery_date %}
+                <td>{{ planet.discovery_date}}</td>
+            {% else %}
+                <td>?</td>
+            {% endif %}
         </tr>
-        {% for planet in planets %}
-            <tr>
-                <td>{{ planet.number }}</td>
-
-                {% if planet.image %}
-                    <td><img src="{{ planet.image.url }}" alt="{{ planet.name }}" width="70"/></td>
-                {% else %}
-                    <td></td>
-                {% endif %}
-
-                {% if planet.symbol %}
-                    <td><img src="{{ planet.symbol.url }}" alt="symbol" width="20"></td>
-                {% else %}
-                    <td></td>
-                {% endif %}
-
-                <td><a href="{% url 'planets:planet_data' planet.number %}">{{ planet }}</a></td>
-                <td>{{ planet.planet_mass_to_earth }}</td>
-                <td>{{ planet.mean_radius_to_earth }}</td>
-                <td>{{ planet.rotation_period|safe }}</td>
-                <td>{{ planet.orbital_period }}</td>
-                <td>{{ planet.orbital_speed }}</td>
-                <td>{{ planet.escape_velocity }}</td>
-                <td>{{ planet.surface_gravity }}</td>
-                <td>{{ planet.semi_major_axis }}</td>
-                <td>{{ planet.moons_quantity }}</td>
-
-                {% if planet.discovery_date %}
-                    <td>{{ planet.discovery_date}}</td>
-                {% else %}
-                    <td>?</td>
-                {% endif %}
-            </tr>
-        {% endfor %}
-    </table>
+    {% endfor %}
+</table>
 
 
-    <p>
-    <!--Moons -->
-    <table>
+<p>
+<!--Moons -->
+<table>
+    <tr>
+        <th>Mother planet</th>
+        <th>Number</th>
+        <th>View</th>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Orbital period</th>
+        <th>Escape velocity, km/s</th>
+        <th>Surface gravity, g</th>
+        <th>Discovery<br> date</th>
+    </tr>
+    {% for moon in moons %}
         <tr>
-            <th>Mother planet</th>
-            <th>Number</th>
-            <th>View</th>
-            <th>Symbol</th>
-            <th>Name</th>
-            <th>Orbital period</th>
-            <th>Escape velocity, km/s</th>
-            <th>Surface gravity, g</th>
-            <th>Discovery<br> date</th>
+            <td>{{ moon.planet }}</td>
+            <td>{{ moon.number }}</td>
+
+            {% if moon.image %}
+                <td><img src="{{ moon.image.url }}" alt="{{ moon.name }}" width="70"> </td>
+            {% else %}
+                <td></td>
+            {% endif %}
+
+            {% if moon.symbol %}
+                <td><img src="{{ moon.symbol.url }}" alt="{{ moon.name }}" width="20"> </td>
+            {% else %}
+                <td></td>
+            {% endif %}
+
+            <td><a href="{% url 'planets:planet_data' moon.number">{{ moon.name }}</a></td>
+            <td>{{ moon.orbital_period }}</td>
+            <td>{{ moon.escape_velocity }}</td>
+            <td>{{ moon.surface_gravity }}</td>
+            <td>{{ moon.discovery_date }}</td>
         </tr>
-        {% for moon in moons %}
-            <tr>
-                <td>{{ moon.planet }}</td>
-                <td>{{ moon.number }}</td>
 
-                {% if moon.image %}
-                    <td><img src="{{ moon.image.url }}" alt="{{ moon.name }}" width="70"> </td>
-                {% else %}
-                    <td></td>
-                {% endif %}
+    {% endfor %}
+</table>
 
-                {% if moon.symbol %}
-                    <td><img src="{{ moon.symbol.url }}" alt="{{ moon.name }}" width="20"> </td>
-                {% else %}
-                    <td></td>
-                {% endif %}
+<!--Chart of orbital speeed-->
+<div id="chart_div"></div>
 
-                <td><a href="{% url 'planets:planet_data' moon.number">{{ moon.name }}</a></td>
-                <td>{{ moon.orbital_period }}</td>
-                <td>{{ moon.escape_velocity }}</td>
-                <td>{{ moon.surface_gravity }}</td>
-                <td>{{ moon.discovery_date }}</td>
-            </tr>
-        {% endfor %}
-    </table>
-
-
-    <script src="{% static 'chart.js' %}"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <div id="chart_div"></div>
-
-    <div class="page-footer" align="right">
-
-        <em>
-            "The Earth is what we all have in common"<br>
-            - Wendell Berry
-        </em>
-    </div>
-    <hr>
-    <h6>
-        This site is in a state of development<br>
-        All information was taken from Wikipedia<br>
-        It is now: {{ now }}
-    </h6>
+<div class="page-footer" align="right">
+    <em>
+        "The Earth is what we all have in common"<br>
+        - Wendell Berry
+    </em>
+</div>
+<hr>
+<h6>
+    This site is in a state of development<br>
+    All information was taken from Wikipedia<br>
+    It is now: {{ now }}
+</h6>
 {% endblock planets_list%}
