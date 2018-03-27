@@ -2,9 +2,15 @@
 {% load static %}
 {% block planets_list %}
 <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="{% static '1.js' %}"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="{% static 'chart_speed.js' %}"></script>
 </head>
+<div class="page-footer" align="right">
+    <em>
+        "The Earth is what we all have in common"<br>
+        - Wendell Berry
+    </em>
+</div>
 <div class="page-header">
     <h3>
         The table shows brief main characteristics of the planets of the solar system.
@@ -66,6 +72,8 @@
     {% endfor %}
 </table>
 
+<!--Chart of orbital speed-->
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
 
 <p>
 <!--Moons -->
@@ -108,15 +116,6 @@
     {% endfor %}
 </table>
 
-<!--Chart of orbital speed-->
-<div id="piechart" style="width: 300px; height: 200px;"></div>
-
-<div class="page-footer" align="right">
-    <em>
-        "The Earth is what we all have in common"<br>
-        - Wendell Berry
-    </em>
-</div>
 <hr>
 <h6>
     This site is in a state of development<br>
