@@ -1,28 +1,30 @@
 window.onload = function () {
 
 var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
+	animationEnabled: false,
 	theme: "dark1", // "light1", "light2", "dark1", "dark2"
 	title:{
-		text: "Top Oil Reserves"
+		text: "Average orbital speed of planets"
 	},
 	axisY: {
-		title: "Reserves(MMbbl)"
+		title: "km/s"
 	},
 	data: [{
 		type: "column",
 		showInLegend: true,
 		legendMarkerColor: "grey",
-		legendText: "MMbbl = one million barrels",
+		legendText: "Planets",
 		dataPoints: [
-			{ y: 300878, label: "Mercury" },
-			{ y: 266455,  label: "Venus" },
-			{ y: 169709,  label: "Earth" },
-			{ y: 158400,  label: "Mars" },
-			{ y: 142503,  label: "Iraq" },
-			{ y: 101500, label: "Kuwait" },
-			{ y: 97800,  label: "UAE" },
-			{ y: 80000,  label: "Russia" }
+			{ y: 47.36,  label: 'Mercury' },
+			{ y: 35.02,  label: "Venus" },
+			{ y: 29.78,  label: "Earth" },
+			{ y: 24.00,  label: "Mars" },
+			{ y: 13.07,  label: "Jupiter" },
+			{ y: 9.68,  label: "Saturn" },
+			{ y: 6.80,  label: "Uranus" },
+			{ y: 5.43,  label: "Neptune" },
+			{ y: 4.67,  label: "Pluto" },
+			{ y: 2, label: 'Unknown'}
 		]
 	}]
 });
