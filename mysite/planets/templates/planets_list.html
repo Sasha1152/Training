@@ -93,7 +93,7 @@
     {% for moon in moons %}
         <tr>
             <td>{{ moon.planet }}</td>
-            <td>{{ moon.number }}</td>
+            <td>{{ moon.number_m }}</td>
 
             {% if moon.image %}
                 <td><img src="{{ moon.image.url }}" alt="{{ moon.name }}" width="70"> </td>

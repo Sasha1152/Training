@@ -36,7 +36,7 @@ class PlanetAdmin(admin.ModelAdmin):
 class MoonAdmin(admin.ModelAdmin):
     list_display = (
         'planet',
-        'number',
+        'number_m',
         'name',
         'escape_velocity',
         'mean_radius_to_earth',
