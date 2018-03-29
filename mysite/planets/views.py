@@ -18,14 +18,13 @@ def planets_list(request):
                                                  })
 
 
-def planet_data(request, number, number_m=None):
-    planet = Planet.objects.get(pk=number)
-    moon = Moon.objects.get(number_m=number_m)
+def planet_data(request, name):
+    planet = Planet.objects.get(name=name)
+    moon = Moon.objects.get(name=name)
     # return HttpResponse(planet)
     return render(request, 'planet_data.html', {'planet': planet,
-                                                'number': number,
+                                                'name': name,
                                                 'moon': moon,
-                                                'number_m': number_m
                                                 })
 
 def moon_data(request, name):

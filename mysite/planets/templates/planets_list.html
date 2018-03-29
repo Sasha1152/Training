@@ -53,7 +53,7 @@
                 <td></td>
             {% endif %}
 
-            <td><a href="{% url 'planets:planet_data' planet.number %}">{{ planet }}</a></td>
+            <td><a href="{% url 'planets:planet_data' planet.name %}">{{ planet }}</a></td>
             <td>{{ planet.planet_mass_to_earth }}</td>
             <td>{{ planet.mean_radius_to_earth }}</td>
             <td>{{ planet.rotation_period|safe }}</td>
@@ -107,7 +107,7 @@
                 <td></td>
             {% endif %}
 
-            <td><a href="{% url 'planets:planet_data' moon.number">{{ moon.name }}</a></td>
+            <td><a href="{% url 'planets:planet_data' moon.name_m">{{ moon.name }}</a></td>
             <td>{{ moon.orbital_period }}</td>
             <td>{{ moon.escape_velocity }}</td>
             <td>{{ moon.surface_gravity }}</td>

@@ -5,6 +5,6 @@ app_name = 'planets'
 
 urlpatterns = [
     url(r'^$', views.planets_list, name='planets_list'),
-    url(r'^(?P<number>[0-9]+)/$', views.planet_data, name='planet_data'),
-    url(r'^(?P<number>[0-9]+)/(?P<number_m>[0-9]+)/$', views.planet_data, name='moon_data'),
+    url(r'^(?P<name>[-\w]+)/$', views.planet_data, name='planet_data'),
+    url(r'^(?P<name>[-\w]+)/$', views.planet_data, name='moon_data'),
 ]
