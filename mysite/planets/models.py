@@ -3,6 +3,7 @@ import datetime
 
 
 class CommonData(models.Model):
+    name = models.CharField(max_length=30)
     image = models.ImageField(blank=True, null=True, upload_to='planets/images/')
     symbol = models.ImageField(blank=True, null=True, upload_to='planets/images/')
     escape_velocity = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=2, verbose_name='Escape velocity, km/s')
@@ -20,7 +21,6 @@ class CommonData(models.Model):
 
 class Planet(CommonData):
     number = models.PositiveSmallIntegerField(primary_key=True)
-    name = models.CharField(max_length=30)
     planet_mass_to_earth = models.DecimalField(blank=True, null=True, max_digits=10, decimal_places=2, verbose_name='Planet mass relative to an Earth')
     orbital_speed = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=2, verbose_name='Average orbital speed, km/s')
     moons_quantity = models.PositiveSmallIntegerField(blank=True, default=0)

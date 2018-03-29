@@ -107,7 +107,7 @@
                 <td></td>
             {% endif %}
 
-            <td><a href="{% url 'planets:planet_data' moon.name_m">{{ moon.name }}</a></td>
+            <td><a href="{% url 'planets:moon_data' moon.name %}">{{ moon.name }}</a></td>
             <td>{{ moon.orbital_period }}</td>
             <td>{{ moon.escape_velocity }}</td>
             <td>{{ moon.surface_gravity }}</td>
