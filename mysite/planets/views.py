@@ -5,28 +5,20 @@ import datetime
 
 
 def planets_list(request):
-    # return HttpResponse('Planets. The home page')
     planets = Planet.objects.all()
-    planets_some = Planet.objects.get(pk=7)
     moons = Moon.objects.all()
-    # return HttpResponse(planets)
     now = datetime.datetime.now()
     return render(request, 'planets_list.html', {'planets': planets,
                                                  'moons': moons,
                                                  'now': now,
-                                                 'planets_some': planets_some
                                                  })
 
 
 def planet_data(request, name):
-    planet = Planet.objects.get(name=name)
-    return render(request, 'planet_data.html', {'planet': planet,
-                                                'name': name,
-                                                })
-
-
-def moon_data(request, name):
-    moon = Moon.objects.get(name=name)
-    return render(request, 'planet_data.html', {'moon': moon, 'name': name})
-
-
+    try:
+        planet = Planet.objects.get(name=name)
+    except Planet.DoesNotExist:
+        moon = Moon.objects.get(name=name)
+        return render(request, 'moon_data.html', {'name': name, 'moon': moon,})
+    else:
+        return render(request, 'planet_data.html', {'planet': planet, 'name': name,})
