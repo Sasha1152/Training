@@ -31,5 +31,5 @@ def replace(s, old, new):
         doctest.testmod()
 '''        
 print(replace('Ukraine', 'i', 'I'))
-print
+print()
 replace('Ukraine ivo init', 'i', 'I')

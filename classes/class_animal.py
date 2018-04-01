@@ -2,7 +2,7 @@ class Animal:
     def __init__(self, name):
         self.name = name
     def talk(self):
-        raise NotImplementedError('Subclass must implement abstract metod')
+        raise NotImplementedError('Subclass must implement abstract method')
 
 class Cat(Animal):
     def talk(self):
@@ -10,7 +10,7 @@ class Cat(Animal):
 
 class Dog(Animal):
     def talk(self):
-        return 'Woow, woof'
+        return 'Woof, woof'
 
 animals = [Cat('Missy'), Cat('Jack'), Cat('Lassie')]
 for animal in animals:

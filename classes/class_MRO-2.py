@@ -20,7 +20,7 @@ class C(A3):
     def who_am_i(self):
         print("I am a C")
 
-class D(B,C):
+class D(B, C):
     # def who_am_i(self):
     #     print("I am a D")
     pass

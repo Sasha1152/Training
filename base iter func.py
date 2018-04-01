@@ -8,7 +8,7 @@ max(['vi','linux','win'], key = lambda x: len(x))  # linux
 
 c = ['a', 'b', 'c']
 d = [1, 2, 3]
-print zip(c,d)  # [('a', 1), ('b', 2), ('c', 3)]
+print(zip(c,d))  # [('a', 1), ('b', 2), ('c', 3)]
 
 d = [1, 2, 3]
 map(lambda x: x*2, d)  # [2, 4, 6]

@@ -1,4 +1,4 @@
-print('Hello. This programm converts Arabic numerals in Rome.')
+print('Hello. This program converts Arabic numerals in Rome.')
 print('*'*25)
 while True:
     try:

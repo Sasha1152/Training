@@ -8,5 +8,5 @@ def min_num(somelist):
             minnum = i
     return minnum
 
-print min_num(test_list)
-print min(test_list)
+print(min_num(test_list))
+print(min(test_list))
