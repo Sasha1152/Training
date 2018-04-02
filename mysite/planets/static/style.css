@@ -63,12 +63,17 @@ table img {
 }
 
 table, td, th {
+    margin: auto;
     border: 2px solid green;
     border-collapse: collapse;
-    padding: 7px;
+    padding: 5px;
     text-align: center;
     font-size: 0.8em;
     line-height: 0.8em;
 }
+
+table {
+    pading: 20px;
+    }
 
 tr:hover { background-color: #000080; }

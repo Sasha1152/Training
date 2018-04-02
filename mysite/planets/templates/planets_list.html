@@ -13,14 +13,14 @@
     </em>
 </div>
 <div class="page-header">
-    <h3>
+    <h3 align="center">
         The table shows brief main characteristics of the planets of the solar system.
         Click on name to see description
     </h3>
 </div>
 
 <!--Planets-->
-<table>
+<table data-padding-left="50%">
     <tr>
         <th>#</th>
         <th>View</th>
@@ -73,17 +73,17 @@
     {% endfor %}
 </table>
 
+<br>
 <!--Chart of orbital speed-->
-<div id="chartContainer" style="height: 370px; width: 75%;"></div>
+<div id="chartContainer" style="height: 400px; width: 65%; margin: auto"></div>
+<br>
 
-<p>
 <!--Moons -->
-<table>
+<table width="65%">
     <tr>
         <th>Mother planet</th>
         <th>Number</th>
         <th>View</th>
-        <th>Symbol</th>
         <th>Name</th>
         <th>Orbital period</th>
         <th>Escape velocity, km/s</th>
@@ -97,12 +97,6 @@
 
             {% if moon.image %}
                 <td><img src="{{ moon.image.url }}" alt="{{ moon.name }}" width="70"> </td>
-            {% else %}
-                <td></td>
-            {% endif %}
-
-            {% if moon.symbol %}
-                <td><img src="{{ moon.symbol.url }}" alt="{{ moon.name }}" width="20"> </td>
             {% else %}
                 <td></td>
             {% endif %}
