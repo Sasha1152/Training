@@ -8,9 +8,9 @@ class B(A):
     pass
 
 class C(A):
-    # def who_am_i(self):
-    #     print("I am a C")
-    pass
+    def who_am_i(self):
+        print("I am a C")
+    # pass
 
 class D(B, C):
     # def who_am_i(self):
