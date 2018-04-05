@@ -1,6 +1,6 @@
 window.onload = function () {
 
-var chart = new CanvasJS.Chart("chartContainer", {
+var chart = new CanvasJS.Chart("chartSpeed", {
 	animationEnabled: false,
 	theme: "dark1", // "light1", "light2", "dark1", "dark2"
 	title:{

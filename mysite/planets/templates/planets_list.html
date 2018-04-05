@@ -4,6 +4,7 @@
 <head>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="{% static 'chart_speed.js' %}"></script>
+    <!--<script src="{% static 'chart_radius.js' %}"></script>-->
 </head>
 
 <div class="page-footer" align="right">
@@ -13,11 +14,9 @@
     </em>
 </div>
 <div class="table_name">
-    <h3>Brief main characteristics of planets of the solar system.</h3>
+    <h3>Brief main characteristics of planets of the solar system</h3>
 </div>
-<h5><p style="text-indent: 100px;">Click on name to see description</h5>
-
-
+<h5 align="center">Click on name to see description</h5>
 
 <!--Planets-->
 <table data-padding-left="50%">
@@ -75,13 +74,16 @@
 
 <br>
 <!--Chart of orbital speed-->
-<div id="chartContainer" style="height: 400px; width: 65%; margin: auto;"></div>
+<div id="chartSpeed" style="height: 400px; width: 65%; margin: auto;"></div>
+<br>
+
 
 <!--Moons -->
 <div class="table_name">
-<h3>Brief main characteristics of moons of planets.
-    Click on name to see description
-</h3>
+    <h3>Brief main characteristics of moons of planets</h3>
+</div>
+<h5 align="center">Click on name to see description</h5>
+
 <table width="65%">
     <tr>
         <th>Mother planet</th>
@@ -114,6 +116,8 @@
     {% endfor %}
 </table>
 
+<!--Chart of radius planet-->
+<div id="chartRadius" style="height: 400px; width: 65%; margin: auto;"></div>
 <hr>
 <h6>
     This site is in a state of development<br>
