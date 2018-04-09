@@ -1,7 +1,7 @@
 window.onload = function () {
 
 var chart = new CanvasJS.Chart("chartSpeed", {
-	animationEnabled: false,
+	animationEnabled: true,
 	theme: "dark1", // "light1", "light2", "dark1", "dark2"
 	title:{
 		text: "Average orbital speed of planets"

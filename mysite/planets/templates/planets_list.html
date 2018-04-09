@@ -2,12 +2,11 @@
 {% load static %}
 {% block planets_list %}
 <head>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script src="{% static 'chart_speed.js' %}"></script>
-    <!--<script src="{% static 'chart_radius.js' %}"></script>-->
+    <!--<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>-->
+    <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
 </head>
 
-<div class="page-footer" align="right">
+<div align="right">
     <em>
         "The Earth is what we all have in common"<br>
         - Wendell Berry
@@ -74,9 +73,11 @@
 
 <br>
 <!--Chart of orbital speed-->
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <div id="chartSpeed" style="height: 400px; width: 65%; margin: auto;"></div>
-<br>
+<script src="{% static 'chart_speed.js' %}" async></script>
 
+<br>
 
 <!--Moons -->
 <div class="table_name">
@@ -116,12 +117,20 @@
     {% endfor %}
 </table>
 
+<br>
 <!--Chart of radius planet-->
-<div id="chartRadius" style="height: 400px; width: 65%; margin: auto;"></div>
+<!--<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>-->
+<!--<div id="chartRadius" style="height: 400px; width: 65%; margin: auto;"></div>-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="{% static 'chart_radius.js' %}" async></script>
+<div id="series_chart_div" style="width: 900px; height: 500px;"></div>
+
+
 <hr>
-<h6>
+
+<footer>
     This site is in a state of development<br>
     All information was taken from Wikipedia<br>
     It is now: {{ now }}
-</h6>
+</footer>
 {% endblock planets_list%}
