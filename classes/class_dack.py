@@ -21,3 +21,4 @@ for thing in [donald, john, who]:
 		InTheForest(thing)
 	except AttributeError:
 		print('Meeooww')
+
