@@ -1,0 +1,16 @@
+If account exceeds the limits, then a notification
+
+ about limits exceeding is sent. If it repeats aga
+
+in, then the account is blocked for an hour. There
+
+fore, the lock period is increased by one hour unt
+
+il 4 hours block sets. When blocking repeats the f
+
+ifth time, then the lock period lasts 24 hours. Th
+
+is rule is cycled. Please be carefull with the num
+
+ber of API calls you complete. 
+
