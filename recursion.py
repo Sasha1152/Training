@@ -5,7 +5,7 @@ def fact(n):
 	else:
 		return n * fact(n - 1)
 
-print fact(5)
+print(fact(5))
 
 # number**pow
 def power(num, pow):
@@ -14,7 +14,7 @@ def power(num, pow):
 	else:
 		return num * power(num, pow - 1)
 
-print power(5, 3)
+print(power(5, 3))
 
 # fibonachi number
 def fib(n):
@@ -25,4 +25,4 @@ def fib(n):
 	else:
 		return fib(n - 1) + fib(n - 2)
 
-print fib(8)
+print(fib(8))

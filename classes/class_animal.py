@@ -9,4 +9,4 @@ class Cat(Animal):
 
 a = Cat('as')
 
-print(abstr.talk())
+print(a.talk())

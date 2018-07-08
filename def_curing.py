@@ -1,5 +1,5 @@
 def foo(first, second):
-	print 'First: %s, second: %s' %(first, second)
+	print('First: %s, second: %s' %(first, second))
 
 # foo_1 = lambda x: lambda y: foo(first, second)
 
