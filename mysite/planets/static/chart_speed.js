@@ -4,16 +4,22 @@ google.charts.setOnLoadCallback(drawBasic);
 function drawBasic() {
 
       var data = google.visualization.arrayToDataTable([
-        ['Planet', 'Speed', { role: 'style' } ],
-        ['Mercury', 10, 'color: gray'],
-        ['Venus', 14, 'color: yellow'],
-        ['Earth', 16, 'color: blue'],
-        ['Mars', 22, 'color: red'],
-        ['2050', 28, 'stroke-color: #871B47; stroke-opacity: 0.6; stroke-width: 8; fill-color: #BC5679; fill-opacity: 0.2']
+        ['Planet', 'Speed', {role: 'style'}],
+        ['Mercury', 47.36, 'color: gray'],
+        ['Venus', 35.02, 'color: yellow'],
+        ['Earth', 29.78, 'color: blue'],
+        ['Mars', 24.00, 'color: red'],
+        ['Jupiter', 13.07, 'color: #871B47'],
+        ['Saturn', 9.68, 'color: #871B47'],
+        ['Uranus', 6.80, 'color: #871B47'],
+        ['Neptune', 5.43, 'color: #871B47'],
+        ['Pluto', 4.67, 'color: #871B47'],
       ]);
 
       var options = {
         title: 'Speed of planets',
+        titleTextStyle: {color: 'OrangeRed', fontName: 'Harmattan', fontSize: 25},
+        backgroundColor: 'black',
         hAxis: {
           format: 'h:mm a',
           viewWindow: {
