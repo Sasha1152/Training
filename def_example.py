@@ -15,3 +15,5 @@ def foo(x, l):
 l = []
 foo(1, l)
 foo(2, l)
+foo(3, l)
+print(l)

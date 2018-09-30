@@ -15,10 +15,10 @@ class Two(Based):
         print(self.inlist)
 
 
-obj1 = One(5)
+obj1 = One(12)
 obj1.multi(10)
 obj1.out()
 
-obj2 = Two('abc')
+obj2 = Two(123)
 obj2.inlist()
 obj2.out()
