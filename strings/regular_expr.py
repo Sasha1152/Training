@@ -25,18 +25,18 @@ About to fall and crush them soon."
 
 import re
 # all words, which beginning of letter 'c'
-print re.findall(r'\bc[a-z]*', vers, re.IGNORECASE)
+print(re.findall(r'\bc[a-z]*', vers, re.IGNORECASE))
 # the same
-print re.findall(r'\bc\w*', vers, re.I)
+print(re.findall(r'\bc\w*', vers, re.I))
 # all words, which beginning of letter 'c' and have four letters
-print re.findall(r'\bc[a-z]{3}\b', vers, re.IGNORECASE)
+print(re.findall(r'\bc[a-z]{3}\b', vers, re.IGNORECASE))
 # the same
-print re.findall(r'\bc\w{3}\b', vers, re.I)
+print(re.findall(r'\bc\w{3}\b', vers, re.I))
 # all words, which ending of letter 'r'
-print re.findall(r'\w+r\b', vers, re.IGNORECASE)
+print(re.findall(r'\w+r\b', vers, re.IGNORECASE))
 # all words, which ending of letter 'l'
-print re.findall(r'[\'\w]+l\b', vers, re.IGNORECASE)
+print(re.findall(r'[\'\w]+l\b', vers, re.IGNORECASE))
 # the same
-print re.findall(r"['\w]+l\b", vers, re.IGNORECASE)
+print(re.findall(r"['\w]+l\b", vers, re.IGNORECASE))
 # the words which have three consonant letters successively
-print re.findall('\w*[aeiou]{3}\w*', vers, re.IGNORECASE)
+print(re.findall('\w*[aeiou]{3}\w*', vers, re.IGNORECASE))
