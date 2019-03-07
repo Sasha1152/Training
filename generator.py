@@ -3,6 +3,7 @@ print(generator_1)  # <generator object <genexpr> at 0x022A7198>
 for i in generator_1:
     print(i)  # 0 1 4
 
+
 def generator_2():
     for i in (1, 2, 3):
         yield i
