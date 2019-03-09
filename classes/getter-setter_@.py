@@ -16,7 +16,7 @@ class Duck():
 
 obj = Duck('Howard')
 print(obj.name)
-obj.name = 'Donald' # inside the setter
+obj.name = 'Donald'  # inside the setter
 print(obj.name)
 
 print(obj.hidden_name)
