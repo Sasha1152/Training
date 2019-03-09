@@ -11,10 +11,10 @@ class B:
     def get_object(cls):
         return B.__count
 
-
+print(B._B__count)  # 0
 a = B()
 # print(B.__count) # error
-print(B._B__count)
+print(a._B__count)  # 1
 b = B()
-print(B._B__count)
-print(B.get_object())
+print(b._B__count)  # 2
+print(b.get_object())  # 2
