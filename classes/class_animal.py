@@ -1,4 +1,5 @@
 class Animal:
+    attribute = 'OK'
     def __init__(self, name):
         self.name = name
 
@@ -9,4 +10,4 @@ class Cat(Animal):
 
 a = Cat('as')
 
-print(a.talk())
+print(Cat('boo').attribute)

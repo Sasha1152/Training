@@ -1,33 +1,15 @@
-class A(object):
-    """Simple docstring"""
-    a = 0
-
-    def __init__(self, name):
-        self.name = name
-
-    def __str__(self):
-        pass
-
-    def pri(self):
-        print('Hello!')
+class A:
+	def spam(self):
+		print(1)
 
 
 class B(A):
-    def __init__(self, name, age):
-        super(B, self).__init__(name)
-        self.age = age
+	def spam(self):
+		print(2)
+		super().spam()  # calls the spam method of the superclass
 
-husband = A('Sasha')
-print(husband.name)
-husband.pri()
-A.pri(husband)
+	def mess(self):
+		super().spam()
 
-wife = B('Kate', '30')
-print(wife.name, wife.age)
-wife.pri()
-print(A.a)
-A.a = 1
-print(B.a)
-print(A.__doc__)
-print(A.__init__)
-print(B.__dict__)
+B().spam()
+B().mess()
