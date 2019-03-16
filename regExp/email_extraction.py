@@ -1,0 +1,12 @@
+import re
+
+pattern = r"([\w\.-]+)@([\w\.-]+)(\.[\w\.]+)"
+string = "Please contact info@sololearn.com for assistance"
+
+match = re.search(pattern, string)
+if match:
+	print(match.group())
+
+# In case the string contains multiple email addresses,
+# we could use the re.findall method instead of re.search,
+# to extract all email addresses.
