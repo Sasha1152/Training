@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+	var d = new Date();  //d stores the current date and time
+  document.write(d, '<br>');
+
+  var hours = d.getHours();  //hours is equal to the current hour
+  var minutes = d.getMinutes();
+  document.write('hours: ', hours, ', minutes: ', minutes, '<br>');
+
+  var d1 = new Date(86400000);  // new Date(milliseconds)
+  document.write(d1, '<br>');
+
+  var d2 = new Date("January 2, 2015 10:42:00");  // new Date(dateString)
+  document.write(d2, '<br>');
+
+  var d3 = new Date(88, 5, 11, 11, 42, 0, 0);  // new Date(year, month, day, hours, minutes, seconds, milliseconds)
+  document.write(d3, '<br>');
+
+</script>
+
+</body>
+</html>

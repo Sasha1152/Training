@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <style>
+    #container {
+      width: 1000px;
+      height: 100px;
+      background: green;
+      position: relative;
+    }
+    #box {
+      width: 50px;
+      height: 100px;
+      background: red;
+      position: absolute;
+    }
+    </style>
+    <div id="container">
+       <div id="box"> </div>
+    </div>
+
+<script>
+  // starting position
+  var pos = 0; 
+  //our box element
+  var box = document.getElementById("box");
+
+  var t = setInterval(move, 10);
+
+  function move() {
+    if(pos >= 950) {
+      clearInterval(t);
+    }
+    else {
+      pos += 1;
+      box.style.left = pos + "px";
+    }
+  }
+</script>
+
+</body>
+</html>

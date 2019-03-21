@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+  function getDecimal(n){
+    var n = Math.abs(n);
+    var decimal_part = (n - Math.floor(n));
+    return +decimal_part.toFixed(10);
+  }
+  
+  alert(getDecimal(5.655))
+  alert( getDecimal(12.345) ); // 0.345
+  alert( getDecimal(1.2) ); // 0.2
+  alert( getDecimal(-1.2) ); // 0.2
+  alert(Math.floor(5.655))
+  
+</script>
+
+</body>
+</html>

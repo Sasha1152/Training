@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+  
+  function sumto(a){
+    sum = 0
+    while(a){
+      sum += a;
+      a -= 1;  	
+    }
+    return sum;
+  }
+  
+  alert('with "while" cycle: ' + sumto(100))
+  
+  function sumto2(a){
+    if(a > 1) {
+      return a + sumto2(a - 1);
+    } else {
+      return a;
+    }
+  }  
+  
+ alert('with recursion: ' + sumto2(100))  
+ 
+ function sumto3(a){
+   return a * (a + 1) / 2;
+ }
+ 
+ alert('with formul: ' + sumto3(100))  
+ 
+</script>
+
+</body>
+</html>

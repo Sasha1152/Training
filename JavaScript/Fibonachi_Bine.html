@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+  function fibBine(n){
+    var golden_section = (1 + Math.sqrt(5)) / 2;
+    var num_fibonachi = Math.pow(golden_section, n) / Math.sqrt(5);
+    return Math.round(num_fibonachi);  
+  }
+  
+alert(fibBine(5))
+alert(fibBine(6))
+alert(fibBine(77)) // must be: 5527939700884757
+  
+</script>
+
+</body>
+</html>

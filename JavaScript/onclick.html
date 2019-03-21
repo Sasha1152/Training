@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <button onclick="show()">Click Me</button>
+  <input type="text" id="name" onchange="change()">
+  <button id="demo">Start</button>
+
+  <script>
+  function show() {
+    alert("Hi there");
+  }
+
+  function change() {
+    var x = document.getElementById('name');
+    x.value = x.value.toUpperCase();
+  }
+
+  var btn = document.getElementById("demo");
+  btn.addEventListener("click", myFunction);
+
+  function myFunction() {
+    alert(Math.random());
+    btn.removeEventListener("click", myFunction);
+  }
+  </script>
+
+</body>
+</html>

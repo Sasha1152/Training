@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+  
+  function factorial(a){
+    while(a > 1){
+      return a * factorial(a - 1);
+    } 
+    return a;
+  };
+  
+  alert('factorial of 5: ' + factorial(5))
+  
+  function factorial2(n) {
+    return n ? n * factorial2(n - 1) : 1;
+  };
+
+  alert(factorial2(5)); // 120
+ 
+</script>
+
+</body>
+</html>

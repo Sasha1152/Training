@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+  
+  function fib(n){
+    a = 0;
+    b = 1;
+    while(n){
+      temp = b;
+      b = a + b;
+      a = temp;
+      n -= 1
+    } 
+    return b;
+  }
+  
+  alert(fib(6))
+  
+  function fib_rec(n){
+    if(n == 0){
+      return 0;
+    } else if(n == 1){
+      return 1;
+    } else {
+      return fib_rec(n - 2) + fib_rec(n - 1)
+    }  
+  }
+
+alert(fib_rec(7))
+  
+</script>
+
+</body>
+</html>
