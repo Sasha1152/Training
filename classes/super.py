@@ -11,5 +11,5 @@ class B(A):
 	def mess(self):
 		super().spam()
 
-B().spam()
-B().mess()
+B().spam()  # 2 1
+B().mess()  # 1
