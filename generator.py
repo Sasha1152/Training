@@ -12,3 +12,8 @@ g = generator_2()  # create generator
 print(g)  # <generator object generator at 0x022B7198>
 for i in g:
     print(i)  # 1 2 3
+
+r = range(10)
+print(r)  # range(0, 10)
+print(type(r))  # <class 'range'>
+print(list(r))  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]

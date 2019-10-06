@@ -5,7 +5,6 @@ class Door(object):
         self.width = width
         self.height = height
         self.color = color
-        
         self.status = 'closed'
         
     def open(self):
@@ -20,7 +19,7 @@ class Door(object):
         print('Door {} has status {}'.format(self.name, self.status))
         
     def get_color(self):
-        print (self.color)
+        print(self.color)
         
 classroom_door = Door('209', 70, 190, 'brown')
 university_door = Door('univercity', 160, 190, 'white')

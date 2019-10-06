@@ -16,8 +16,8 @@ class Changeable:
 
 canvas = Changeable("green")
 frame = Changeable("blue")
-print(canvas, frame)
+print(canvas, frame)  # green blue
 
 canvas("red")
 frame("yellow")
-print(canvas, frame)
+print(canvas, frame)  # red yellow
