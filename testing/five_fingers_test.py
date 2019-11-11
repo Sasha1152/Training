@@ -1,5 +1,5 @@
 import unittest
-from five_fingers_def import finger_name
+from . five_fingers_def import finger_name
 
 
 class FiveFingersTest(unittest.TestCase):

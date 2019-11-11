@@ -1,4 +1,4 @@
-alphabet = ' abcdefghijklmnopqrstuvwxyz' # length = 27
+alphabet = ' abcdefghijklmnopqrstuvwxyz'  # length = 27
 
 def ord(text, step):
     text_cipher = ''

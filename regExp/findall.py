@@ -24,6 +24,7 @@ Folks would think it was the moon\
 About to fall and crush them soon."
 
 import re
+
 # all words, which beginning of letter 'c'
 print(re.findall(r'\bc[a-z]*', vers, re.IGNORECASE))
 # the same
