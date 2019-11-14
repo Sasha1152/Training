@@ -15,3 +15,7 @@ def func(**kwargs):
 	print(kwargs['c'])
 
 func(a='one', b='two', c='three')  # three
+
+a, *b = [1, 2, 3, 4, 5]
+print(a)  # 1
+print(b)  # [2, 3, 4, 5]

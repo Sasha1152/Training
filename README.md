@@ -1,2 +1,2 @@
-This repozitory by Sasha Shmigelskii. 
+This repozitory by Alexandr Shmyhelskyi. 
 It's my training repozitory
