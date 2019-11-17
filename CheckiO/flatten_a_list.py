@@ -68,4 +68,4 @@ def get_flat_list_6(array):
     return flat_list
 
 
-print(get_flat_list_6([1, 2, [3, 4, [5, 6], 7, [[8, [9, [10]]]]], [[[11]]]]))
+print(get_flat_list_3([1, 2, [3, 4, [5, 6], 7, [[8, [9, [10]]]]], [[[11]]]]))
