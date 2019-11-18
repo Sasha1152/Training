@@ -1,4 +1,5 @@
 # https://py.checkio.org/ru/mission/sun-angle/
+
 from time import strptime
 
 

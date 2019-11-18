@@ -1,3 +1,5 @@
+# https://py.checkio.org/ru/mission/time-converter-24h-to-12h/
+
 def time_converter(time):
     hour = int(time[:2])
     if hour == 0:

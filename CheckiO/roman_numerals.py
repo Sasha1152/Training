@@ -1,3 +1,5 @@
+# https://py.checkio.org/ru/mission/roman-numerals/
+
 print('Hello. This program converts Arabic numerals in Rome.')
 print('*'*25)
 while True:

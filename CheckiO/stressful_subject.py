@@ -1,3 +1,5 @@
+# https://py.checkio.org/ru/mission/stressful-subject/
+
 import re
 
 def is_stressful(subj):

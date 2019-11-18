@@ -1,3 +1,5 @@
+# https://py.checkio.org/ru/mission/flatten-list/
+
 def get_flat_list_1(array):
     def flatten(nested_list):
         try:
