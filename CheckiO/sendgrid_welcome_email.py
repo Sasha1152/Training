@@ -1,7 +1,7 @@
 import sendgrid
 from sendgrid.helpers.mail import Mail
 
-API_KEY = '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'
+API_KEY = ''  # https://app.sendgrid.com/settings/api_keys?extID=128039&channel=sponsorship&camp=game&pub=checkio&place=game&creative=ei&utm_medium=sponsorship&utm_source=checkio
 SUBJECT = 'Welcome'
 BODY = 'Hi {}'
 sg = sendgrid.SendGridAPIClient(API_KEY)
