@@ -4,8 +4,8 @@ x + 5 = 15, 45 / x = 8 etc. A numbers must be
 natural.
 """
 while True:
-    print 'enter equation(type "exit" to quit):'
-    s_start = raw_input()
+    print('enter equation(type "exit" to quit):')
+    s_start = str(input())
     if s_start == 'exit':
         break
 
@@ -55,10 +55,10 @@ while True:
             s[i] = str(s[i])
 
     if (s[1] == '-' or s[1] == '/') and s[2] == str(x):
-        print '{} = {} {} {}'.format(unknown, known, antisign, result)
+        print('{} = {} {} {}'.format(unknown, known, antisign, result))
     else:
-        print '{} = {} {} {}'.format(unknown, result, antisign, known)
+        print('{} = {} {} {}'.format(unknown, result, antisign, known))
 
-    print '{} = {}'.format(unknown, x)
-    print '-'*12
-    print ' '.join(s)
+    print('{} = {}'.format(unknown, x))
+    print( '-'*12)
+    print(' '.join(s))

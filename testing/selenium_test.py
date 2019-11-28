@@ -15,7 +15,8 @@ assert "Welcome to Python" in driver.page_source
 
 elem = driver.find_element_by_partial_link_text("Welcome to Python")
 elem.click()
-
+print(driver.title)  # Welcome to Python.org
+print(driver.current_url)  # https://www.python.org/
 elem = driver.find_element_by_id('news')
 elem.click()
 
