@@ -1,11 +1,14 @@
 beautifulsoup4==4.8.1
 bs4==0.0.1
+certifi==2019.11.28
+chardet==3.0.4
 configparser==4.0.2
 html5lib==1.0.1
+idna==2.8
 python-http-client==3.2.1
 requests==2.22.0
 selenium==3.141.0
 sendgrid==6.1.0
+six==1.13.0
 soupsieve==1.9.5
-urllib3==1.25.6
 webencodings==0.5.1
