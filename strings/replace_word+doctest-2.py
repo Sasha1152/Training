@@ -26,7 +26,7 @@ def replace(s, old, new):
         return (' '.join(sentence_list))
 #    print(words)
 '''
-    if __name__ == '__main__':
+    if __name__ == '__main__.py':
         import doctest
         doctest.testmod()
 '''        

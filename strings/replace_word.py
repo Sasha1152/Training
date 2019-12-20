@@ -33,5 +33,5 @@ def replace(s, old, new):
     return result
 
 
-if __name__ == '__main__':
+if __name__ == '__main__.py':
     doctest.testmod()

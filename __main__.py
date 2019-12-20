@@ -15,6 +15,7 @@ If this file is being imported from another module, __name__ will be set to the 
 def function():
     print("This is a module function")
 
+
 if __name__ == "__main__":
     print("This is a script")
 

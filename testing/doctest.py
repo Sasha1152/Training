@@ -11,6 +11,6 @@ def is_divisible_by_2_or_5(n):
     """
     return n % 2 == 0 or n % 5 == 0
 
-if __name__ == '__main__':
+if __name__ == '__main__.py':
     import doctest
     doctest.testmod()

@@ -74,5 +74,5 @@ class FiveFingersTest(unittest.TestCase):
         result = finger_name(30, ['minipinky', 'pinky', 'ring', 'middle', 'index', 'thumb', 'megathumb'])
         self.assertEqual(result, 'thumb')
 
-if __name__ == '__main__':
+if __name__ == '__main__.py':
     unittest.main()

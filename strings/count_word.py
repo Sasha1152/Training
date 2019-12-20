@@ -21,6 +21,6 @@ def count(sub,s):
         # print(word)
     return n
 
-if __name__ == '__main__':
+if __name__ == '__main__.py':
     import doctest
     doctest.testmod()

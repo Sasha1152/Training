@@ -28,6 +28,6 @@ def is_good_string(string):
     return not len(opened_bracket)
 
 
-if __name__ == '__main__':
+if __name__ == '__main__.py':
     import doctest
     doctest.testmod()

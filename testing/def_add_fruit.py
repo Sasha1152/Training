@@ -25,6 +25,6 @@ add_fruit(new_inventory, 'straw', 25)
 new_inventory['straw']
 
 
-if __name__ == '__main__':
+if __name__ == '__main__.py':
     import doctest
     doctest.testmod()

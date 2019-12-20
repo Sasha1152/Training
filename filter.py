@@ -4,3 +4,4 @@ print(list(filter(lambda x: x != 'a', my_list)))
 print(list(filter(lambda x: x == 'a', my_list)))
 print(list(filter(lambda x: x % 2, my_list)))
 print(filter(lambda x: x % 5, my_list))
+print(list(filter(None, [0, None, [], {}, set(), "", 42])))  # 42

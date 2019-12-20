@@ -25,6 +25,6 @@ def remove(sub,s):
         # print(new_word)
     return new_word
 
-if __name__ == '__main__':
+if __name__ == '__main__.py':
     import doctest
     doctest.testmod()
