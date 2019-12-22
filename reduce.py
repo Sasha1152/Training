@@ -1,3 +1,4 @@
+####### fot Python 2.7 ############
 summa = 0
 for i in range (5):
     summa += i
@@ -20,3 +21,10 @@ def custom_reduce(func, sequence):
     return item
 
 print(custom_reduce(lambda x, y: x - y, [11, 1, 3, 6]))
+
+######### for Python 3 #########
+
+import functools
+
+summa = functools.reduce(lambda x, y: x + y, range(5))
+print(summa)
