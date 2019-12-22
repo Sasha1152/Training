@@ -1,6 +1,5 @@
 # https://habr.com/ru/post/141501/
 
-
 def decorator(method_to_decorate):
 	print('OK')
 	def wrapper(self, n):

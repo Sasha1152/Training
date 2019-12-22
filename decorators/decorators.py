@@ -1,4 +1,4 @@
-"""This module describes hot wo implement permission checker decorator."""
+"""This module describes how to implement permission checker decorator."""
 
 # Write custom function which returns your name or username.
 # Write decorator which allows access for your user
@@ -16,7 +16,7 @@ class PermissionException(Exception):
     pass
 
 def get_user():
-    return 'pivanch'
+    return 'pivanchy'
 
 def wrapper(fn):
     def wrapped(*args, **kwargs):
