@@ -6,6 +6,13 @@ r = requests.get('https://www.yellowpages.com/austin-tx/plumbers')
 soup = BeautifulSoup(r.text, 'html5lib')
 companies = soup.body.find('div', {'class': 'search-results organic'}).find_all('div', {'class': 'info'})
 
+# print(soup.prettify())
+# print(soup.contents[0])
+# print(soup.find('div', {'class': 'phones phone primary'}))
+# print(soup.find_all('div', {'class': 'phones phone primary'}))
+# print(soup.title)
+# print(soup.body)
+# print(soup.body)
 
 def get_company_name(com):
     if com.find('a', {'class': 'track-map-it directions'}):

@@ -1,6 +1,0 @@
-i=open('inp.txt','r')
-o=open('out.txt','w')
-s=i.read(5)
-o.write(s)
-i.close()
-o.close()

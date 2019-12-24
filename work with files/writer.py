@@ -1,6 +1,6 @@
-my_file = open('module7.txt', 'w') # r, w, a, w+, b
+my_file = open('writer.txt', 'w') # r, w, a, w+, b
 while True:
-    a = raw_input('enter text: ')
+    a = input('enter text: ')
     if a == '':
         break
     my_file.write(a + '\n')
