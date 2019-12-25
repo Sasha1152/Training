@@ -1,5 +1,8 @@
 # https://www.youtube.com/watch?v=h_B3O5jWMi4&list=PLlb7e2G7aSpTTNp7HBYzCBByaE1h54ruW&index=3
+# https://pythonworld.ru/moduli/modul-functools.html
+
 import functools
+
 
 def trace(func):
     def inner(*args, **kwargs):
