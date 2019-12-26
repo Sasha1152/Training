@@ -4,6 +4,8 @@
 # Open brackets must be closed in the correct order.
 # Note that an empty string is also considered valid.
 
+import re
+
 
 def is_good_string(string):
     """
@@ -17,24 +19,20 @@ def is_good_string(string):
         False
         >>> is_good_string('{[]}')
         True
-        >>> is_good_string('   ')
+        >>> is_good_string('[{([])}{{(([]))}}]')
+        True
+        >>> is_good_string('[{([])}{{(([]))}}[]')
+        False
+        >>> is_good_string('')
         True
     """
 
-    brackets = '([{}])'
-    opening_brackets = '([{'
-    brackets_dict = {'(': ')', '[': ']', '{': '}'}
-    opened_bracket = []
+    pattern = r'\(\)|\[\]|\{\}'
+    while re.search(pattern, string):
+        string = re.sub(pattern, '', string)
 
-    for i in string:
-        if i in brackets:
-            if i in opening_brackets:
-                opened_bracket.append(i)
+    return not string
 
-            elif i == brackets_dict.get(opened_bracket[-1]):
-                opened_bracket.pop()
-
-    return not len(opened_bracket)
 
 
 if __name__ == '__main__.py':
