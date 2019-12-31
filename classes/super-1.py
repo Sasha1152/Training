@@ -31,3 +31,5 @@ print(B.a)
 print(A.__doc__)
 print(A.__init__)
 print(B.__dict__)
+
+help(B)

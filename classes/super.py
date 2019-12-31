@@ -6,7 +6,7 @@ class A:
 class B(A):
 	def spam(self):
 		print(2)
-		super().spam()  # calls the spam method of the superclass
+		super().spam()  # or A.spam(self) calls the spam method of the superclass
 
 	def mess(self):
 		super().spam()

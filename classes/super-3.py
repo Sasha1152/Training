@@ -1,6 +1,5 @@
 # https://www.journaldev.com/15911/python-super
 
-
 class A:
     def __init__(self):
         print('Initializing: class A')
@@ -31,3 +30,5 @@ class C(B):
 
 c = C()
 c.sub_method(1)
+
+help(C)

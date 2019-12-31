@@ -1,7 +1,8 @@
 class User:
-    def setName(self, n):
+    def set_name(self, n):
          self.name = n
-    def getName(self):
+
+    def get_name(self):
         try:
             return print(self.name)
         except:
@@ -9,6 +10,6 @@ class User:
 
 first = User()
 second = User()
-first.setName("Bob")
-first.getName()  # 'Bob'
-second.getName()  # 'No name'
+first.set_name("Bob")
+first.get_name()  # 'Bob'
+second.get_name()  # 'No name'

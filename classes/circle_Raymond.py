@@ -4,10 +4,22 @@ import math
 class Circle:
     """An advanced circle analitic toolkit"""
 
+    __slots__ = ['diameter']  # flyweight design pattern suppresses the instance dictionary
     version = '0.1'  # class variable
 
     def __init__(self, radius):
         self.radius = radius  # instance variable
+
+    @property                 # convert dotted access to method calls
+    def radius(self):
+        """Radius of a circle"""
+        return self.diameter / 2
+
+    @radius.setter
+    def radius(self, radius):
+        self.diameter = radius * 2
+
+
 
     def area(self):
         """Perform quadrature on a shape of uniform radius"""
@@ -15,6 +27,17 @@ class Circle:
 
     def perimeter(self):
         return 2.0 * math.pi * self.radius
+
+    @classmethod                 # alternative constructor
+    def from_bbd(cls, bbd):
+        """Construct a circle form a bounding box diagonal"""
+        radius = bbd / 2.0 / math.sqrt(2.0)
+        return cls(radius)  # or Circle(radius)
+
+    @staticmethod                # attach functions to classes
+    def angle_to_grade(angle):
+        """Convert angle in degree to a percentage grade"""
+        return math.tan(math.radians(angle)) * 100
 
 
 cuts = [0.1, 0.5, 0.8]
@@ -27,6 +50,14 @@ for c in circles:
     )
     c.radius *= 1.1  # attribute was changed!
     print(f'and a warm area of {c.area()}\n')
+
+
+с = Circle.from_bbd(25.1)
+print(
+    f'A circlet with a bbd of 25.1\n'
+    # f'has a radius {c.radius()}\n'  # TypeError: 'float' object is not callable
+    f'and an area of {c.area()}\n'
+    )
 
 
 class Tire(Circle):
