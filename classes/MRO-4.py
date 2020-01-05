@@ -17,3 +17,5 @@ c = C()
 c.method()  # A method
 c.another_method()  # B method
 c.third_method()  # C method
+
+print(A.__subclasses__())
