@@ -29,12 +29,12 @@ first match as a tuple.
 
 pattern = r"pam"
 
-match = re.search(pattern, "eggspamsausage")
+string = re.search(pattern, "eggspamsausage")
 
-print(match.group())  # pam
-print(match.start())  # 4
-print(match.end())  # 7
-print(match.span())  # (4, 7)
+print(string.group())  # pam
+print(string.start())  # 4
+print(string.end())  # 7
+print(string.span())  # (4, 7)
 
 
 """
