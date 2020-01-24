@@ -6,6 +6,7 @@ class Health:
     def __init__(self, health, delta=10):
         self.health = health
         self.delta = delta
+        self.start_health = health
 
     def decrease(self, power):
         self.health -= power * self.delta
@@ -15,6 +16,9 @@ class Health:
 
     def __str__(self):
         return f"{self.health}"
+
+    def restore_health(self):
+        self.health = self.start_health
 
 
 class Warrior:
@@ -42,7 +46,6 @@ class Battle:
         self.quantity = quantity_of_warriors
         self.warriors = self.get_all_warriors()
 
-
     def run(self):
         Output.print_process(self.warriors)
 
@@ -50,13 +53,11 @@ class Battle:
             while len(self.warriors):
                 self.let_fight()
                 self.battle_num += 1
-            print('Winners list: ', list(map(lambda x: x.name, self.winners)))
 
-        # if self.winners:
-        #     self.warriors = self.winners
-        #     print(self.warriors)
-        #     self.let_fight()
-
+        if self.winners:
+            self.warriors = self.winners
+            self.winners = []
+            self.run()
 
     def let_fight(self):
         Output.print_battle_num(self.battle_num)
@@ -71,18 +72,19 @@ class Battle:
             self.do_attack(attacking_warrior, attacked_warrior)
             Output.print_health_ratio(war1, war2)
             if not attacked_warrior.still_alive():
+                attacking_warrior.health.restore_health()
                 self.winner = attacking_warrior
                 self.winners.append(self.winner)
                 print(f"{self.winner} won!")
+                # print('Warriors list: ', list(map(lambda x: x.name, self.warriors)))
+                # print('Winners list: ', list(map(lambda x: x.name, self.winners)))
                 break
-
 
     def get_all_warriors(self):
         warname = [names.get_full_name() for name in range(self.quantity)]
         health = [random.randint(100, 200) for i in range(self.quantity)]
         power = [round(random.uniform(0.5, 3), 1) for i in range(self.quantity)]
         return [Warrior(warname[i], Health(health[i]), power[i]) for i in range(self.quantity)]
-
 
     def get_two_warriors(self):
         war1 = self.warriors.pop(random.randrange(len(self.warriors)))
@@ -120,7 +122,6 @@ class Output:
                     "\nThe battle impossible!\n"
                     f"{warriors[0]} has no any competitor!",
                 )
-
         else:
             print(
                 "The battle impossible!\n"
