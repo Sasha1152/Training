@@ -1,3 +1,5 @@
+# https://habr.com/ru/post/335866/
+
 def foo(first, second):
 	print('First: %s, second: %s' % (first, second))
 
@@ -12,3 +14,7 @@ def foo2(first):
 foo('a', 'b')
 
 print(foo2('a'))
+
+f = foo2('a')
+
+f('b')
