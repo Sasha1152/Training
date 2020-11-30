@@ -1,9 +1,9 @@
-def is_palindrome(s):
-    reverse_word = ''
-    for letter in s:
-        reverse_word = letter + reverse_word
-        # print(rewerse_word)
-    return reverse_word == s
+def is_palindrome(word):
+    reversed_word = ''
+    for letter in word:
+        reversed_word = letter + reversed_word
+        print(reversed_word)
+    return reversed_word == word
 
 assert is_palindrome('ABBA') == True
 assert is_palindrome('OKKO') == True

@@ -5,8 +5,8 @@ for i in range(1, len(a)):
     while i:
         if key < a[i - 1]:
             a[i] = a[i - 1]
-            print a
+            print(a)
             a[i - 1] = key
-            print a
+            print(a)
         i -= 1
-print a
+print(a)
