@@ -1,19 +1,19 @@
 def square(func):
     return lambda x: func(x * x)
 
-def addsome(func):
+def add_one(func):
     return lambda x: func(x + 1)
 
 
 @square  # calls first
-@addsome  # cals second
+@add_one  # calls second
 def identity(x):
     return x
 
 print(identity(2)) # 5
 
 
-@addsome
+@add_one
 @square
 def identity(x):
     return x
