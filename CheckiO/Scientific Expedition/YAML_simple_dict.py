@@ -3,6 +3,7 @@
 def yaml(a):
     yaml_dict = {}
     yaml_list = a.split('\n')
+    print(yaml_list)
     for element in yaml_list:
         if element:
             element_list = element.split(': ')
