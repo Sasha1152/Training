@@ -3,4 +3,5 @@ __pycache__/
 .idea/
 /temp/
 temp.py
+test.py
 /.python-version
